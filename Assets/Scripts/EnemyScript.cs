@@ -14,7 +14,7 @@ public class EnemyScript : MonoBehaviour
     public int maxHealth = 5;
     public int currentHealth;
 
-    Transform target;
+    public Transform target;
     private Rigidbody2D rB;
 
     private bool isGettingKnockedBack;
