@@ -9,6 +9,7 @@ public class MovementScript : MonoBehaviour
     private Vector2 acceleration;
     private Vector2 velocity;
     public float speed = 500;
+    
 
     void Start()
     {
