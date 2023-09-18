@@ -101,7 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   knockBackPower: 1000
-  stressAmount: 2
+  stressAmountToApplyToPlayer: 0
+  maxHealth: 5
+  currentHealth: 0
 --- !u!50 &5540260222443481631
 Rigidbody2D:
   serializedVersion: 4

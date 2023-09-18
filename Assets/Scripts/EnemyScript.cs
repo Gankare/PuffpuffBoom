@@ -6,7 +6,11 @@ public class EnemyScript : MonoBehaviour
 {
     public float movementSpeed = 10;
     public float knockBackPower;
-    public float stressAmount;
+    public float stressAmountToApplyToPlayer;
+
+    public int maxHealth = 5;
+    public int currentHealth;
+
     Transform target;
     private Rigidbody2D rB;
 
@@ -14,6 +18,7 @@ public class EnemyScript : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rB = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -28,7 +33,17 @@ public class EnemyScript : MonoBehaviour
     {
         Debug.Log("Collision with thing");
 
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Spike")
+        {
+            currentHealth -= FindObjectOfType<ShootingScript>().spikeDamage;
+
+            if(currentHealth <= 0)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Collided with player");
 
@@ -38,7 +53,7 @@ public class EnemyScript : MonoBehaviour
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);
 
-            collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmount);
+            collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToApplyToPlayer);
         }
 
     }

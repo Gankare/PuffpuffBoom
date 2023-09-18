@@ -1609,6 +1609,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 1595307684940003384, guid: 0007001f85e5c41489806816827016a5, type: 3}
   shootSpeed: 5
   reloadTimeAmount: 0.7
+  spikeDamage: 1
   currentAmmo: 8
   maxAmmo: 5
   ammoCounterArray:
@@ -2183,6 +2184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8263897157056420701, guid: 350a43171d4944047be51a230d694a68, type: 3}
       propertyPath: m_Name
       value: Enemy

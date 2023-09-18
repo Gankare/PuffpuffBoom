@@ -11,6 +11,10 @@ public class ShootingScript : MonoBehaviour
     public float shootSpeed;
     private float reloadTimer;
     public float reloadTimeAmount;
+
+    public int spikeDamage = 1;
+
+
     public int currentAmmo = 5;
     public int maxAmmo = 5;
     public GameObject[] ammoCounterArray;
