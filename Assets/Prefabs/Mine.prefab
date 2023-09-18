@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbff3335e75b7a2429d541f7788606d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockBackPower: 4000
+  knockBackPower: 750
   rB: {fileID: 3708337250630127016}
   stressAmountToAdd: 3
 --- !u!50 &3708337250630127016

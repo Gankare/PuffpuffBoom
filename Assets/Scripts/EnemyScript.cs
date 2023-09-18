@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public float movementSpeed = 10;
+    public float maxMovementSpeed = 10;
+
     public float knockBackPower;
+    public float selfKnockBackPower;
     public float stressAmountToApplyToPlayer;
 
     public int maxHealth = 5;
@@ -26,7 +29,11 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
-        rB.velocity = direction * movementSpeed;
+
+        if(!(rB.velocity.magnitude > maxMovementSpeed))
+        {
+            rB.velocity += direction * movementSpeed;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -49,7 +56,7 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("Collided with player");
 
             Vector3 moveDirection = rB.transform.position - collision.transform.position;
-            rB.AddForce(-moveDirection.normalized * -knockBackPower);
+            rB.AddForce(-moveDirection.normalized * -selfKnockBackPower);
 
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);

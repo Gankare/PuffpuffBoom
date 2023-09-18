@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9cedbc44ad6c847a191ddcc60c0088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
-  knockBackPower: 1000
+  movementSpeed: 1
+  knockBackPower: 200
+  selfKnockBackPower: 300
   stressAmountToApplyToPlayer: 1
   maxHealth: 10
   currentHealth: 0
