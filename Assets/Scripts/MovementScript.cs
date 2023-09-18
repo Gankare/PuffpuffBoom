@@ -9,7 +9,6 @@ public class MovementScript : MonoBehaviour
     private Vector2 acceleration;
     private Vector2 velocity;
     public float speed = 500;
-    public Camera cam;
 
     void Start()
     {
@@ -19,10 +18,6 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        //Rotate player towards mouse
-        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
-
         if (Input.GetKey(KeyCode.W))
         {
             acceleration += Vector2.up;
