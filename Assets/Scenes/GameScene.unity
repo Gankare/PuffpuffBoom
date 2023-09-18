@@ -263,6 +263,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6345745992525478223, guid: 073dbcaf2f5a11445aa77eb94a5a4f9d, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345745992525478223, guid: 073dbcaf2f5a11445aa77eb94a5a4f9d, type: 3}
+      propertyPath: m_AngularDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345745992525478223, guid: 073dbcaf2f5a11445aa77eb94a5a4f9d, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8873295751985599858, guid: 073dbcaf2f5a11445aa77eb94a5a4f9d, type: 3}
       propertyPath: m_Name
       value: Puffer
