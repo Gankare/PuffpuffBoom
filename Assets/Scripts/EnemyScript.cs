@@ -35,7 +35,8 @@ public class EnemyScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Spike")
         {
-            currentHealth -= FindObjectOfType<ShootingScript>().spikeDamage;
+            currentHealth -= collision.gameObject.GetComponent<SpikeScript>().damage;
+            collision.gameObject.GetComponent<SpikeScript>().Explode();
 
             if(currentHealth <= 0)
             {

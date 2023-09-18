@@ -12,8 +12,6 @@ public class ShootingScript : MonoBehaviour
     private float reloadTimer;
     public float reloadTimeAmount;
 
-    public int spikeDamage = 1;
-
 
     public int currentAmmo = 5;
     public int maxAmmo = 5;

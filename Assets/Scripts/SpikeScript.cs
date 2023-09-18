@@ -6,6 +6,8 @@ public class SpikeScript : MonoBehaviour
 {
     private Rigidbody2D rb2D;
     public float speed;
+    public int damage;
+
     private float timer;
     void Start()
     {
@@ -19,5 +21,10 @@ public class SpikeScript : MonoBehaviour
 
         if (timer >= 4)
             Destroy(gameObject);
+    }
+
+    public void Explode()
+    {
+        Destroy(this.gameObject);
     }
 }
