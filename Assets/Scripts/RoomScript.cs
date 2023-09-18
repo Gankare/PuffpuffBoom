@@ -10,12 +10,17 @@ public class RoomScript : MonoBehaviour
     public static int enemiesDead;
     public GameObject[] rooms;
 
-    private void FixedUpdate()
+    private void Start()
+    {
+        level = 1;
+    }
+    private void Update()
     {
         if (level == 1 && enemiesDead >= 1)
         {
             level = 2; 
             enemiesDead = 0;
+            Debug.Log("next level");
         }
         else if (level == 2 && enemiesDead >= 2)
         {
@@ -36,7 +41,7 @@ public class RoomScript : MonoBehaviour
         {
             rooms[i].SetActive(false);
         }
-        for (int i = 0; i <= level; i++)
+        for (int i = 0; i < level; i++)
         {
             rooms[i].SetActive(true);
         }
