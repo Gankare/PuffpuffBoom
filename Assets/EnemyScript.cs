@@ -7,12 +7,12 @@ public class EnemyScript : MonoBehaviour
     public float movementSpeed = 10;
     public float knockBackPower;
     Transform target;
-    Rigidbody2D rigidbody2D;
+    private Rigidbody2D rB;
 
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
-        rigidbody2D.velocity = direction * movementSpeed;
+        rB.velocity = direction * movementSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -31,8 +31,8 @@ public class EnemyScript : MonoBehaviour
         {
             Debug.Log("Collided with player");
 
-            Vector3 moveDirection = rigidbody2D.transform.position - collision.transform.position;
-            rigidbody2D.AddForce(-moveDirection.normalized * -knockBackPower);
+            Vector3 moveDirection = rB.transform.position - collision.transform.position;
+            rB.AddForce(-moveDirection.normalized * -knockBackPower);
 
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);
