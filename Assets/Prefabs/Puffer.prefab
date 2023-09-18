@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5404568098284920182}
   - component: {fileID: 4430765599798891393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801237515539256374}
   - component: {fileID: 1668506029012380608}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7967574448357815461}
   - component: {fileID: 594738346964149982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1264092637968388970}
   - component: {fileID: 6754946098882651881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4186700533412633178}
   - component: {fileID: 5206509509111713485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8023911743307758534}
   - component: {fileID: 5134517850853750247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8678465218562697420}
   - component: {fileID: 6189424862345072970}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219921777769419261}
   - component: {fileID: 2682519174878065203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9223122803451942738}
   - component: {fileID: 7063728084221259903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7662705849264094291}
   - component: {fileID: 5152877833336536315}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4299826176566041682}
   - component: {fileID: 8690757273831305858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6763884186107070155}
   - component: {fileID: 8599859758494962908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5637296432240723043}
   - component: {fileID: 1446301489093689355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490717628435572516}
   - component: {fileID: 689341193184327822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8614353700780281686}
   - component: {fileID: 5855331993555710071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1270,7 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2188745518202991379}
   - component: {fileID: 139170201389243494}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1354,7 +1354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4234288946491820492}
   - component: {fileID: 3415084952603198759}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1438,7 +1438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8953293721371238572}
   - component: {fileID: 6215630467845865912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8343992323764986364}
   - component: {fileID: 8991468013183274931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894315206026760699}
   - component: {fileID: 1016224519116362109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1690,7 +1690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6259829191176432683}
   - component: {fileID: 7162555389910500460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1774,7 +1774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725918717841380495}
   - component: {fileID: 1811813814005356352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1858,7 +1858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741802841667538728}
   - component: {fileID: 1503776664985347129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tagg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1945,7 +1945,8 @@ GameObject:
   - component: {fileID: 2809550876051231699}
   - component: {fileID: 6345745992525478223}
   - component: {fileID: 367508987246084064}
-  m_Layer: 0
+  - component: {fileID: 2706074007692034191}
+  m_Layer: 7
   m_Name: Puffer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2054,6 +2055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b73185d8897381a45abb97b81c510542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 500
+  cam: {fileID: 0}
 --- !u!50 &6345745992525478223
 Rigidbody2D:
   serializedVersion: 4
@@ -2067,16 +2070,16 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_LinearDrag: 2.5
+  m_AngularDrag: 2.5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2126,3 +2129,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &2706074007692034191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8873295751985599858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f3c73bad9eee14b954d1a845f47472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikePrefab: {fileID: 1595307684940003384, guid: 0007001f85e5c41489806816827016a5, type: 3}
+  shootSpeed: 10
