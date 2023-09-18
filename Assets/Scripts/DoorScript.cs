@@ -11,7 +11,7 @@ public class DoorScript : MonoBehaviour
     {
         if (RoomScript.level == removeAtLevel)
         {
-            Instantiate(ps, transform.position, Quaternion.identity);
+            Instantiate(ps, transform.position, transform.rotation);
             Destroy(gameObject);
            
         }
