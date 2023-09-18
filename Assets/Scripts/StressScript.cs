@@ -12,7 +12,9 @@ public class StressScript : MonoBehaviour
     private void Start()
     {
         stressBarScript = FindObjectOfType<StressBarScript>();
-        stressBarScript.UpdateStressBar(currentStress, maxStress);
+        
+        if(stressBarScript != null)
+            stressBarScript.UpdateStressBar(currentStress, maxStress);
 
     }
 
