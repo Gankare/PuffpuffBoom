@@ -2380,7 +2380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
       propertyPath: selfKnockBackPower
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8263897157056420701, guid: 350a43171d4944047be51a230d694a68, type: 3}
       propertyPath: m_Name

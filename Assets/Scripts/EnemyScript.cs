@@ -17,6 +17,8 @@ public class EnemyScript : MonoBehaviour
     Transform target;
     private Rigidbody2D rB;
 
+    private bool isGettingKnockedBack;
+
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -30,10 +32,21 @@ public class EnemyScript : MonoBehaviour
         Vector2 direction = target.position - transform.position;
         direction.Normalize();
 
-        if(!(rB.velocity.magnitude > maxMovementSpeed))
+        if (!isGettingKnockedBack)
         {
-            rB.velocity += direction * movementSpeed;
+            rB.velocity = direction * movementSpeed;
         }
+        else
+        {
+            if(rB.velocity.magnitude <= 0.5)
+            {
+                isGettingKnockedBack = false;
+            }
+        }
+
+
+
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -56,6 +69,8 @@ public class EnemyScript : MonoBehaviour
             Debug.Log("Collided with player");
 
             Vector3 moveDirection = rB.transform.position - collision.transform.position;
+
+            isGettingKnockedBack = true;
             rB.AddForce(-moveDirection.normalized * -selfKnockBackPower);
 
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
