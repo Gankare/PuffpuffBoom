@@ -2362,26 +2362,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5540260222443481631, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: m_LinearDrag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5540260222443481631, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: m_AngularDrag
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: movementSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: maxMovementSpeed
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: selfKnockBackPower
-      value: 300
-      objectReference: {fileID: 0}
     - target: {fileID: 8263897157056420701, guid: 350a43171d4944047be51a230d694a68, type: 3}
       propertyPath: m_Name
       value: Enemy

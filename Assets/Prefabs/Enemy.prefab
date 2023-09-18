@@ -102,7 +102,7 @@ MonoBehaviour:
   movementSpeed: 2
   maxMovementSpeed: 2.5
   knockBackPower: 200
-  selfKnockBackPower: 300
+  selfKnockBackPower: 500
   stressAmountToApplyToPlayer: 1
   maxHealth: 10
   currentHealth: 0
