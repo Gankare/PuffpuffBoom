@@ -12,7 +12,6 @@ public class StressScript : MonoBehaviour
     private void Start()
     {
         stressBarScript = FindObjectOfType<StressBarScript>();
-
         stressBarScript.UpdateStressBar(currentStress, maxStress);
 
     }
@@ -21,6 +20,11 @@ public class StressScript : MonoBehaviour
     {
         currentStress += stressAmount;
         stressBarScript.UpdateStressBar(currentStress, maxStress);
+
+        if(currentStress >= maxStress)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
