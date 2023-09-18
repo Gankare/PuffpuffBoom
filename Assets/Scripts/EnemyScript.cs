@@ -22,6 +22,8 @@ public class EnemyScript : MonoBehaviour
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        if(target == null) { Debug.Log("The player does not have the Player tag on its gameobject, the enemies have no target and will not move."); }
+
         rB = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
     }
