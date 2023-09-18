@@ -6,6 +6,7 @@ public class MineScript : MonoBehaviour
 {
     public float knockBackPower;
     public Rigidbody2D rB;
+    public float stressAmountToAdd;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,6 +16,7 @@ public class MineScript : MonoBehaviour
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);
 
+            collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToAdd);
 
             Destroy(this.gameObject);
         }
