@@ -835,14 +835,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: movementSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5822495124046981037, guid: 350a43171d4944047be51a230d694a68, type: 3}
-      propertyPath: knockBackPower
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 8263897157056420701, guid: 350a43171d4944047be51a230d694a68, type: 3}
       propertyPath: m_Name
       value: Enemy
