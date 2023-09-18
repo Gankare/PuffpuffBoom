@@ -13,8 +13,13 @@ public class ShootingScript : MonoBehaviour
     private float reloadTimer;
     public int ammo = 8;
     public GameObject[] ammoCounter;
-    public GameObject childRtotation;
-    public Camera cam;
+    public GameObject childRotation;
+    private Camera cam;
+
+    private void Start()
+    {
+        cam = FindObjectOfType<Camera>();
+    }
 
     void Update()
     {
