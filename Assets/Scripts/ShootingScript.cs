@@ -9,7 +9,6 @@ public class ShootingScript : MonoBehaviour
 {
     public GameObject spikePrefab;
     public float shootSpeed;
-    private Vector3 shootDirection;
     private float reloadTimer;
     public int ammo = 8;
     public GameObject[] ammoCounter;
@@ -41,9 +40,5 @@ public class ShootingScript : MonoBehaviour
     {
         Instantiate(spikePrefab, transform.position, childRotation.transform.rotation);
         ammo--;
-        for(int i = 0; i < ammo; i++)
-        {
-            
-        }
     }
 }
