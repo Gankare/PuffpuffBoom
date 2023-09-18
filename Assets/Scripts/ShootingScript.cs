@@ -10,14 +10,19 @@ public class ShootingScript : MonoBehaviour
     public GameObject spikePrefab;
     public float shootSpeed;
     private float reloadTimer;
-    public int ammo = 8;
-    public GameObject[] ammoCounter;
+    public float reloadTimeAmount;
+    public int currentAmmo = 5;
+    public int maxAmmo = 5;
+    public GameObject[] ammoCounterArray;
     public GameObject childRotation;
     private Camera cam;
 
     private void Start()
     {
         cam = FindObjectOfType<Camera>();
+        currentAmmo = maxAmmo;
+        UpdateAmmoCounter();
+
     }
 
     void Update()
@@ -26,19 +31,39 @@ public class ShootingScript : MonoBehaviour
         childRotation.transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
         reloadTimer += Time.deltaTime;
 
-        if (ammo < 8 && reloadTimer >= 1)
+        if (currentAmmo < maxAmmo && reloadTimer >= reloadTimeAmount)
         {
-            ammo++;
+            currentAmmo++;
             reloadTimer = 0;
+            UpdateAmmoCounter();
         }
-        if (ammo > 0 && Input.GetKeyDown(KeyCode.Space) || ammo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Space) || currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
+            reloadTimer = 0;
             Shoot();
         }
     }
     private void Shoot()
     {
+
         Instantiate(spikePrefab, transform.position, childRotation.transform.rotation);
-        ammo--;
+        currentAmmo--;
+
+      
+        UpdateAmmoCounter();
+
+    }
+
+    public void UpdateAmmoCounter()
+    {
+        for (int i = 0; i < ammoCounterArray.Length; i++)
+        {
+            ammoCounterArray[i].SetActive(false);
+        }
+        for (int i = 0; i < currentAmmo; i++)
+        {
+            ammoCounterArray[i].SetActive(true);
+        }
+
     }
 }
