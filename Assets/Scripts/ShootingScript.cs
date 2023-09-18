@@ -12,12 +12,14 @@ public class ShootingScript : MonoBehaviour
     private Vector3 shootDirection;
     private float reloadTimer;
     public int ammo = 8;
-
     public GameObject[] ammoCounter;
-    public GameObject ammoObject;
+    public GameObject childRtotation;
+    public Camera cam;
 
     void Update()
     {
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        childRtotation.transform.rotation = Quaternion.LookRotation(Vector3.forward, mousePos - transform.position);
         reloadTimer += Time.deltaTime;
 
         if (ammo < 8 && reloadTimer >= 1)
@@ -32,7 +34,7 @@ public class ShootingScript : MonoBehaviour
     }
     private void Shoot()
     {
-        Instantiate(spikePrefab, transform.position, transform.rotation);
+        Instantiate(spikePrefab, transform.position, childRtotation.transform.rotation);
         ammo--;
         for(int i = 0; i < ammo; i++)
         {
