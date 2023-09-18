@@ -47,6 +47,7 @@ public class EnemyScript : MonoBehaviour
 
             if(currentHealth <= 0)
             {
+                RoomScript.enemiesDead++;
                 Destroy(this.gameObject);
             }
         }
