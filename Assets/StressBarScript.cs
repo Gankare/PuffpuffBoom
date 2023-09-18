@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 public class StressBarScript : MonoBehaviour
 {
-    public float maxHealth;
-    public float currentHealth;
 
     public Image stressBarImage;
 
-    public void UpdateStressBar()
+ 
+
+    public void UpdateStressBar(float currentStress, float maxStress)
     {
-        stressBarImage.fillAmount =  currentHealth / maxHealth;
+        stressBarImage.fillAmount = currentStress / maxStress;
     }
 
-    private void Update()
-    {
-        UpdateStressBar();
-    }
+
+
 }

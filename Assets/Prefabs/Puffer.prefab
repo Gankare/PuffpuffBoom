@@ -1945,6 +1945,7 @@ GameObject:
   - component: {fileID: 2809550876051231699}
   - component: {fileID: 6345745992525478223}
   - component: {fileID: 367508987246084064}
+  - component: {fileID: 5441097224480619524}
   m_Layer: 0
   m_Name: Puffer
   m_TagString: Player
@@ -2127,3 +2128,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &5441097224480619524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8873295751985599858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60a577c8ad055e4aa9e6bdcfe118bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStress: 10
+  currentStress: 0

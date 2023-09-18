@@ -6,6 +6,7 @@ public class EnemyScript : MonoBehaviour
 {
     public float movementSpeed = 10;
     public float knockBackPower;
+    public float stressAmount;
     Transform target;
     private Rigidbody2D rB;
 
@@ -37,11 +38,8 @@ public class EnemyScript : MonoBehaviour
             Rigidbody2D playerRigidbody2D = collision.gameObject.GetComponent<Rigidbody2D>();
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);
 
+            collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmount);
         }
 
-        //if (collision.gameObject.GetComponent<Laser>() != null)
-        //{
-
-        //}
     }
 }
