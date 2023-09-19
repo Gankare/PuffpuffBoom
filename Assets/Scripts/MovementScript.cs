@@ -51,6 +51,8 @@ public class MovementScript : MonoBehaviour
                     Debug.Log("max speed");
                 }
             }
+            else
+                rigidBody.velocity = Vector2.zero;
         }
     }
     private void FixedUpdate()

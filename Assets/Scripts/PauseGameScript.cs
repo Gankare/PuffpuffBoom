@@ -18,7 +18,7 @@ public class PauseGameScript : MonoBehaviour
         }
         if(gamePaused)
         {
-            Time.timeScale = 0.05f;
+            Time.timeScale = 0.1f;
         }
         else    Time.timeScale = 1;
     }
