@@ -25,6 +25,8 @@ public class StressScript : MonoBehaviour
 
         if(currentStress >= maxStress)
         {
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnExplosion(this.gameObject.transform.position);
+            Debug.Log("Spawned explosion");
             Destroy(this.gameObject);
         }
     }

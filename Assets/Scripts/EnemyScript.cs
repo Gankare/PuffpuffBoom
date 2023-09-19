@@ -33,6 +33,7 @@ public class EnemyScript : MonoBehaviour
     { 
         if(!PauseGameScript.gamePaused) 
         { 
+            if(target == null) { return; } //If player dies
             Vector2 direction = target.position - transform.position;
             direction.Normalize();
 
