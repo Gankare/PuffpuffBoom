@@ -13,15 +13,15 @@ public class TransformCameraScript : MonoBehaviour
     {
         if (RoomScript.level == 2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(room2.position.x, room2.position.y, -10), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, room2.position, speed * Time.deltaTime);
         }
         else if (RoomScript.level == 3)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(room3.position.x, room3.position.y, -10), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, room3.position, speed * Time.deltaTime);
         }
         else if (RoomScript.level == 4)
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(room4.position.x, room4.position.y, -10), speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, room4.position, speed * Time.deltaTime);
         }
     }
 }

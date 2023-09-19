@@ -19,33 +19,36 @@ public class MovementScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            acceleration += Vector2.up;
-        }
+        if(!RoomScript.nextRoomPause) 
+        { 
+            if (Input.GetKey(KeyCode.W))
+            {
+                acceleration += Vector2.up;
+            }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            acceleration += Vector2.down;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            acceleration += Vector2.left;
-        }
+            if (Input.GetKey(KeyCode.S))
+            {
+                acceleration += Vector2.down;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                acceleration += Vector2.left;
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            acceleration += Vector2.right;
-        }
+            if (Input.GetKey(KeyCode.D))
+            {
+                acceleration += Vector2.right;
+            }
 
-        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
-        {
-            acceleration = Vector2.zero;
-        }
-        if (rigidBody.velocity.sqrMagnitude >= 25)
-        {
-            //rigidBody.velocity = Vector2.ClampMagnitude(rigidBody.velocity, 5);
-            Debug.Log("max speed");
+            if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+            {
+                acceleration = Vector2.zero;
+            }
+            if (rigidBody.velocity.sqrMagnitude >= 25)
+            {
+                //rigidBody.velocity = Vector2.ClampMagnitude(rigidBody.velocity, 5);
+                Debug.Log("max speed");
+            }
         }
     }
     private void FixedUpdate()
