@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour
@@ -30,6 +31,17 @@ public class UIScript : MonoBehaviour
         {
             ammoCounterArray[i].SetActive(true);
         }
+    }
+
+    public void RespawnMethod()
+    {
+        StartCoroutine(Respawn());
+    }
+
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(0);
     }
 
 }
