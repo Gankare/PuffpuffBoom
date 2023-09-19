@@ -1854,7 +1854,7 @@ GameObject:
   - component: {fileID: 1078486021}
   - component: {fileID: 1078486020}
   m_Layer: 0
-  m_Name: ScriptHolder
+  m_Name: RoomScriptHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - {fileID: 0}
+  - {fileID: 71000014}
   - {fileID: 1145612352}
   - {fileID: 1265976167}
   - {fileID: 1040389763}

@@ -27,6 +27,12 @@ public class RoomScript : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         level = 1;
+
+        //Sets all rooms to deactive in the beginning
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            rooms[i].SetActive(false);
+        }
     }
     private void Update()
     {
@@ -56,10 +62,8 @@ public class RoomScript : MonoBehaviour
             //Spawn boss or win game
         }
 
-        for (int i = 0; i < rooms.Length; i++)
-        {
-            rooms[i].SetActive(false);
-        }
+        //
+      
         for (int i = 0; i < level; i++)
         {
             rooms[i].SetActive(true);
