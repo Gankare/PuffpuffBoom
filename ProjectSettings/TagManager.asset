@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: OceanBG
+    uniqueID: 498322311
+    locked: 0
+  - name: RockTileMap
+    uniqueID: 3774436665
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
