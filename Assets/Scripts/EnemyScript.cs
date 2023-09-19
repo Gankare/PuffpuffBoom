@@ -30,10 +30,10 @@ public class EnemyScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        if(!PauseGameScript.gamePaused) 
-        { 
-            if(target == null) { return; } //If player dies
+    {
+        if (!PauseGameScript.gameSlowed && !PauseGameScript.gamePaused && !RoomScript.nextRoomPause)
+        {
+            if (target == null) { return; } //If player dies
             Vector2 direction = target.position - transform.position;
             direction.Normalize();
 
@@ -43,12 +43,14 @@ public class EnemyScript : MonoBehaviour
             }
             else
             {
-                if(rB.velocity.magnitude <= 0.5)
+                if (rB.velocity.magnitude <= 0.5)
                 {
                     isGettingKnockedBack = false;
                 }
             }
         }
+        else 
+            rB.velocity = Vector2.zero;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

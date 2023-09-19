@@ -39,7 +39,7 @@ public class ShootingScript : MonoBehaviour
             reloadTimer = 0;
             UpdateAmmoCounter();
         }
-        if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Space) || currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+        if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
             reloadTimer = 0;
             Shoot();

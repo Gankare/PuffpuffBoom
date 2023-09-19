@@ -20,7 +20,7 @@ public class MovementScript : MonoBehaviour
     {
         if(!RoomScript.nextRoomPause) 
         {
-            if (!PauseGameScript.gamePaused)
+            if (!PauseGameScript.gameSlowed && !PauseGameScript.gamePaused)
             { 
                 if (Input.GetKey(KeyCode.W))
                 {
