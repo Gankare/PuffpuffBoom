@@ -15,15 +15,20 @@ public class ShootingScript : MonoBehaviour
 
     public int currentAmmo = 5;
     public int maxAmmo = 5;
-    public GameObject[] ammoCounterArray;
     public GameObject childRotation;
     private Camera cam;
+
+    UIScript UI_script;
 
     private void Start()
     {
         cam = FindObjectOfType<Camera>();
         currentAmmo = maxAmmo;
-        UpdateAmmoCounter();
+
+        UI_script = FindObjectOfType<UIScript>();
+
+
+        UI_script.UpdateAmmoCounter();
 
     }
 
@@ -37,7 +42,7 @@ public class ShootingScript : MonoBehaviour
         {
             currentAmmo++;
             reloadTimer = 0;
-            UpdateAmmoCounter();
+            UI_script.UpdateAmmoCounter();
         }
         if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -49,18 +54,8 @@ public class ShootingScript : MonoBehaviour
     {
         Instantiate(spikePrefab, transform.position, childRotation.transform.rotation);
         currentAmmo--;
-        UpdateAmmoCounter();
+        UI_script.UpdateAmmoCounter();
     }
 
-    public void UpdateAmmoCounter()
-    {
-        for (int i = 0; i < ammoCounterArray.Length; i++)
-        {
-            ammoCounterArray[i].SetActive(false);
-        }
-        for (int i = 0; i < currentAmmo; i++)
-        {
-            ammoCounterArray[i].SetActive(true);
-        }
-    }
+ 
 }
