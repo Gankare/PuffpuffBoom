@@ -5,17 +5,16 @@ using UnityEngine;
 public class StressScript : MonoBehaviour
 {
     public float maxStress;
-    public float currentStress;
+    private float currentStress;
 
-    StressBarScript stressBarScript;
+    UIScript stressBarScript;
 
     private void Start()
     {
-        stressBarScript = FindObjectOfType<StressBarScript>();
+        stressBarScript = FindObjectOfType<UIScript>();
         
         if(stressBarScript != null)
             stressBarScript.UpdateStressBar(currentStress, maxStress);
-
     }
 
     public void ChangeStressAmount(float stressAmount)
