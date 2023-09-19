@@ -24,6 +24,8 @@ public class UIScript : MonoBehaviour
 
     public void UpdateAmmoCounter()
     {
+        if(playerShootingScript == null) { return; } //If player is dead
+
         for (int i = 0; i < ammoCounterArray.Length; i++)
         {
             ammoCounterArray[i].SetActive(false);
