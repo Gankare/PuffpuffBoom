@@ -34,6 +34,12 @@ public class EnemyScript : MonoBehaviour
         if (!PauseGameScript.gameSlowed && !PauseGameScript.gamePaused && !RoomScript.nextRoomPause)
         {
             if (target == null) { return; } //If player dies
+
+            //Look at player
+            Vector3 dir = transform.position - target.position;
+            float angle = (Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg) - 90;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
             Vector2 direction = target.position - transform.position;
             direction.Normalize();
 
