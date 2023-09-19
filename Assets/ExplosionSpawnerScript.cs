@@ -10,5 +10,6 @@ public class ExplosionSpawnerScript : MonoBehaviour
     {
         GameObject newExplosion = Instantiate(KABOOM_prefab, position, transform.rotation);
         Destroy(newExplosion, 1f);
+        Debug.Log("Spawned explosion");
     }
 }
