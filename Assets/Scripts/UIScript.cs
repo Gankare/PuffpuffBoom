@@ -14,6 +14,7 @@ public class UIScript : MonoBehaviour
     private void Start()
     {
         playerShootingScript = FindObjectOfType<ShootingScript>();
+        UpdateAmmoCounter();
     }
 
     public void UpdateStressBar(float currentStress, float maxStress)

@@ -108,6 +108,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   target: {fileID: 0}
+  flashTime: 0.1
+  origionalColor: {r: 1, g: 1, b: 1, a: 0}
+  sprite_renderer: {fileID: 5561053564446638475}
 --- !u!50 &5540260222443481631
 Rigidbody2D:
   serializedVersion: 4

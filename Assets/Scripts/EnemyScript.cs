@@ -73,6 +73,8 @@ public class EnemyScript : MonoBehaviour
                 RoomScript.enemiesDead++;
                 Destroy(this.gameObject);
             }
+
+            FlashRed();
         }
 
         if (collision.gameObject.tag == "Player")
@@ -88,7 +90,25 @@ public class EnemyScript : MonoBehaviour
             playerRigidbody2D.AddForce(moveDirection.normalized * -knockBackPower);
 
             collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToApplyToPlayer);
+
+            FlashRed();
+
         }
 
+    }
+
+    public float flashTime;
+    public Color origionalColor;
+    public SpriteRenderer sprite_renderer;
+
+    void FlashRed()
+    {
+        sprite_renderer.color = Color.red;
+        Invoke("ResetColor", flashTime);
+    }
+
+    void ResetColor()
+    {
+        sprite_renderer.color = origionalColor;
     }
 }
