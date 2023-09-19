@@ -48,7 +48,7 @@ public class MovementScript : MonoBehaviour
                 if (rigidBody.velocity.sqrMagnitude >= 25)
                 {
                     //rigidBody.velocity = Vector2.ClampMagnitude(rigidBody.velocity, 5);
-                    Debug.Log("max speed");
+                    //Debug.Log("max speed");
                 }
             }
             else
@@ -67,5 +67,8 @@ public class MovementScript : MonoBehaviour
             rigidBody.AddForce(velocity);
         }
     }
+
+
+
 }
 

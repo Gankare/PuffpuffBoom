@@ -10,6 +10,7 @@ public class StressScript : MonoBehaviour
 
     UIScript stressBarScript;
 
+
     private void Start()
     {
         stressBarScript = FindObjectOfType<UIScript>();
@@ -23,6 +24,9 @@ public class StressScript : MonoBehaviour
         currentStress += stressAmount;
         stressBarScript.UpdateStressBar(currentStress, maxStress);
 
+
+        if(stressAmount > 0) { FlashRed(); }
+
         if(currentStress >= maxStress)
         {
             //Spawn explosion
@@ -34,6 +38,19 @@ public class StressScript : MonoBehaviour
         }
     }
 
- 
 
+    public float flashTime;
+    public Color origionalColor;
+    public SpriteRenderer sprite_renderer;
+
+    void FlashRed()
+    {
+        sprite_renderer.color = Color.red;
+        Invoke("ResetColor", flashTime);
+    }
+
+    void ResetColor()
+    {
+        sprite_renderer.color = origionalColor;
+    }
 }

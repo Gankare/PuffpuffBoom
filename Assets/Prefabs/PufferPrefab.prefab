@@ -148,6 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxStress: 10
   currentStress: 0
+  flashTime: 0.2
+  origionalColor: {r: 1, g: 1, b: 1, a: 1}
+  sprite_renderer: {fileID: 4715260091905522435}
 --- !u!50 &132693948521957148
 Rigidbody2D:
   serializedVersion: 4

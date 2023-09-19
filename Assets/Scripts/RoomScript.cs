@@ -28,6 +28,7 @@ public class RoomScript : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         level = 1;
+        enemiesDead = 0;
 
         //Sets all rooms to deactive in the beginning
         for (int i = 0; i < rooms.Length; i++)

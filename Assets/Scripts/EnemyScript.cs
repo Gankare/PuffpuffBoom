@@ -55,14 +55,12 @@ public class EnemyScript : MonoBehaviour
                 }
             }
         }
-        else 
+        else if(rB != null)
             rB.velocity = Vector2.zero;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision with thing");
-
         if (collision.gameObject.tag == "Spike")
         {
             currentHealth -= collision.gameObject.GetComponent<SpikeScript>().damage;
@@ -79,8 +77,6 @@ public class EnemyScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Collided with player");
-
             Vector3 moveDirection = rB.transform.position - collision.transform.position;
 
             isGettingKnockedBack = true;
