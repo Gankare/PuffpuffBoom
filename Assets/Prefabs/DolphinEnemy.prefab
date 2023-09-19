@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9cedbc44ad6c847a191ddcc60c0088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
-  maxMovementSpeed: 2.5
+  movementSpeed: 10
+  maxMovementSpeed: 10
   knockBackPower: 200
   selfKnockBackPower: 500
   stressAmountToApplyToPlayer: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
   currentHealth: 0
   target: {fileID: 0}
   flashTime: 0.1
-  origionalColor: {r: 1, g: 1, b: 1, a: 0}
+  origionalColor: {r: 1, g: 1, b: 1, a: 1}
   sprite_renderer: {fileID: 5561053564446638475}
 --- !u!50 &5540260222443481631
 Rigidbody2D:

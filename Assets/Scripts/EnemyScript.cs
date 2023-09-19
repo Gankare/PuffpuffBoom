@@ -91,6 +91,16 @@ public class EnemyScript : MonoBehaviour
 
             collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToApplyToPlayer);
 
+
+            currentHealth -= 1;
+
+            if (currentHealth <= 0)
+            {
+                RoomScript.enemiesDead++;
+                Destroy(this.gameObject);
+            }
+
+
             FlashRed();
 
         }
