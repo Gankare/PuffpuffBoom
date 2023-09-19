@@ -5,7 +5,7 @@ using UnityEngine;
 public class StressScript : MonoBehaviour
 {
     public float maxStress;
-    private float currentStress;
+    public float currentStress;
 
     UIScript stressBarScript;
 
