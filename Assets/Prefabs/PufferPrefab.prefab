@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 3844819883443903013}
   - component: {fileID: 871898557781601085}
   - component: {fileID: 132693948521957148}
-  - component: {fileID: 3602707381945499847}
   - component: {fileID: 1766611736183776808}
+  - component: {fileID: 2959755804734908392}
   m_Layer: 7
   m_Name: PufferPrefab
   m_TagString: Player
@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStress: 10
-  currentStress: 0
 --- !u!50 &132693948521957148
 Rigidbody2D:
   serializedVersion: 4
@@ -175,8 +174,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3602707381945499847
-BoxCollider2D:
+--- !u!114 &1766611736183776808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222617459460558434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f3c73bad9eee14b954d1a845f47472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikePrefab: {fileID: 1595307684940003384, guid: 0007001f85e5c41489806816827016a5, type: 3}
+  shootSpeed: 5
+  reloadTimeAmount: 0.7
+  currentAmmo: 8
+  maxAmmo: 5
+  childRotation: {fileID: 6154876794409598343}
+--- !u!58 &2959755804734908392
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -208,42 +225,5 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1766611736183776808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9222617459460558434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1f3c73bad9eee14b954d1a845f47472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spikePrefab: {fileID: 1595307684940003384, guid: 0007001f85e5c41489806816827016a5, type: 3}
-  shootSpeed: 5
-  reloadTimeAmount: 0.7
-  currentAmmo: 8
-  maxAmmo: 5
-  ammoCounterArray:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  childRotation: {fileID: 6154876794409598343}
+  m_Radius: 1.3
