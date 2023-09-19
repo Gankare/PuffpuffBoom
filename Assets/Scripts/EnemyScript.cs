@@ -30,25 +30,24 @@ public class EnemyScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        Vector2 direction = target.position - transform.position;
-        direction.Normalize();
+    { 
+        if(!PauseGameScript.gamePaused) 
+        { 
+            Vector2 direction = target.position - transform.position;
+            direction.Normalize();
 
-        if (!isGettingKnockedBack)
-        {
-            rB.velocity = direction * movementSpeed;
-        }
-        else
-        {
-            if(rB.velocity.magnitude <= 0.5)
+            if (!isGettingKnockedBack)
             {
-                isGettingKnockedBack = false;
+                rB.velocity = direction * movementSpeed;
+            }
+            else
+            {
+                if(rB.velocity.magnitude <= 0.5)
+                {
+                    isGettingKnockedBack = false;
+                }
             }
         }
-
-
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

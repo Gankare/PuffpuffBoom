@@ -21,6 +21,7 @@ public class RoomScript : MonoBehaviour
     public Transform room2PlayerPos;
     public Transform room3PlayerPos;
     public Transform room4PlayerPos;
+    public GameObject boarderColliders;
 
     private void Start()
     {
@@ -64,22 +65,28 @@ public class RoomScript : MonoBehaviour
             rooms[i].SetActive(true);
         }
 
-        if(level == 2 && pauseTimer < 3)
+        if(level == 2 && pauseTimer < 4)
         {
+            boarderColliders.SetActive(false);
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room2PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 3 && pauseTimer < 3)
+        else if (level == 3 && pauseTimer < 4)
         {
+            boarderColliders.SetActive(false);
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room3PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 4 && pauseTimer < 3)
+        else if (level == 4 && pauseTimer < 4)
         {
+            boarderColliders.SetActive(false);
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room4PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
         else
+        {
+            boarderColliders.SetActive(true);
             nextRoomPause = false;
+        }
     }
 }
