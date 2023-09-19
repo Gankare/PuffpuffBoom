@@ -47,13 +47,9 @@ public class ShootingScript : MonoBehaviour
     }
     private void Shoot()
     {
-
         Instantiate(spikePrefab, transform.position, childRotation.transform.rotation);
         currentAmmo--;
-
-      
         UpdateAmmoCounter();
-
     }
 
     public void UpdateAmmoCounter()
@@ -66,6 +62,5 @@ public class ShootingScript : MonoBehaviour
         {
             ammoCounterArray[i].SetActive(true);
         }
-
     }
 }
