@@ -18,6 +18,11 @@ public class MineScript : MonoBehaviour
 
             collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToAdd);
 
+            //Spawn explosion
+            var explosionManager = FindObjectOfType<ExplosionSpawnerScript>();
+            if(explosionManager == null) { Debug.Log("NO EXPLOSION MANAGER PREFAB IN SCENE!"); }
+            else { explosionManager.SpawnExplosion(this.transform.position); }
+
             Destroy(this.gameObject);
         }
     }
