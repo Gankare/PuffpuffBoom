@@ -134,8 +134,9 @@ GameObject:
   - component: {fileID: 23161329}
   - component: {fileID: 23161331}
   - component: {fileID: 23161330}
+  - component: {fileID: 23161332}
   m_Layer: 5
-  m_Name: Shell
+  m_Name: SeaStar_Pink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,16 +149,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23161328}
-  m_LocalRotation: {x: -0, y: -0, z: -0.10901481, w: 0.99404013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960575810}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324, y: -9}
+  m_AnchoredPosition: {x: 169.1, y: -162.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &23161330
@@ -198,6 +199,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23161328}
   m_CullTransparentMesh: 1
+--- !u!111 &23161332
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23161328}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 39260f5373309f548b26aa91dc038a2e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 39260f5373309f548b26aa91dc038a2e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &106031728
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 106031730}
+  pufferFish: {fileID: 187259930}
 --- !u!4 &173469252
 Transform:
   m_ObjectHideFlags: 0
@@ -478,6 +496,7 @@ GameObject:
   - component: {fileID: 187259931}
   - component: {fileID: 187259930}
   - component: {fileID: 187259929}
+  - component: {fileID: 187259932}
   m_Layer: 5
   m_Name: Puffer_Button
   m_TagString: Untagged
@@ -502,7 +521,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187259929
 MonoBehaviour:
@@ -523,7 +542,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9066377, g: 0.4669811, b: 1, a: 1}
@@ -575,12 +594,12 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 61.11, y: 62.28, z: 68.1, w: 84.5}
+  m_RaycastPadding: {x: 12, y: 12, z: 13, w: 7}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6c53f1be90bb74240bf4cf81513d767a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ca9db0372ddf5234392fd0b31562e741, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -598,6 +617,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187259927}
   m_CullTransparentMesh: 1
+--- !u!95 &187259932
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187259927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 293d56a99a8a39b41ab8ed7562354998, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &335185892
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,8 +799,9 @@ GameObject:
   - component: {fileID: 661903846}
   - component: {fileID: 661903848}
   - component: {fileID: 661903847}
+  - component: {fileID: 661903849}
   m_Layer: 5
-  m_Name: Shell (6)
+  m_Name: DubbleFish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +820,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1960575810}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -263, y: 108}
@@ -823,6 +864,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661903845}
   m_CullTransparentMesh: 1
+--- !u!111 &661903849
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661903845}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7e0878a4588947144a17c8e8e5009b91, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7e0878a4588947144a17c8e8e5009b91, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &671202938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,8 +1126,9 @@ GameObject:
   - component: {fileID: 1306479818}
   - component: {fileID: 1306479820}
   - component: {fileID: 1306479819}
+  - component: {fileID: 1306479821}
   m_Layer: 5
-  m_Name: Shell (4)
+  m_Name: SeaStar_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1092,7 +1150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 188, y: -172}
+  m_AnchoredPosition: {x: -323.5, y: -32.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1306479819
@@ -1133,6 +1191,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1306479817}
   m_CullTransparentMesh: 1
+--- !u!111 &1306479821
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306479817}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f0025c0970e248e469d482fa55a59de9, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f0025c0970e248e469d482fa55a59de9, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1405635633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,8 +1368,9 @@ GameObject:
   - component: {fileID: 1759382498}
   - component: {fileID: 1759382500}
   - component: {fileID: 1759382499}
+  - component: {fileID: 1759382501}
   m_Layer: 5
-  m_Name: Shell (7)
+  m_Name: Fish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1317,7 +1392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231, y: -16}
+  m_AnchoredPosition: {x: 304, y: 121}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759382499
@@ -1358,6 +1433,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759382497}
   m_CullTransparentMesh: 1
+--- !u!111 &1759382501
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759382497}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 981c1afb5ae73604fb51b3804c4447ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 981c1afb5ae73604fb51b3804c4447ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1960575806
 GameObject:
   m_ObjectHideFlags: 0
