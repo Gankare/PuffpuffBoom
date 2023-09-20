@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public int removeAtLevel;
-    public ParticleSystem ps;
+    public int OpenAtLevel;
+    private bool doorOpened = false;
+    private Animator animator;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void FixedUpdate()
     {
-        if (RoomScript.level == removeAtLevel)
+        if (RoomScript.level == OpenAtLevel && !doorOpened)
         {
-            Instantiate(ps, transform.position, transform.rotation);
-            Destroy(gameObject);
-           
+            animator.SetTrigger("Open");
+            doorOpened = true;
         }
     }
 }

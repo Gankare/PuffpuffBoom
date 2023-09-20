@@ -51,6 +51,8 @@ public class PauseGameScript : MonoBehaviour
         }
         else if(!gamePaused && !gameSlowed || stressScript.currentStress >= stressScript.maxStress)
         {
+            gamePaused = false;
+            gameSlowed = false;
             FindObjectOfType<UIScript>().FadeImage(false);
             Time.timeScale = 1;
         }
