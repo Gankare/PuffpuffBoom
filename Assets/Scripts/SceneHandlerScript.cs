@@ -20,7 +20,7 @@ public class SceneHandlerScript : MonoBehaviour
     IEnumerator StartGameAfter()
     {
         pufferFish.CrossFadeAlpha(0, 0.2f, true);
-        fade.CrossFadeAlpha(255, 2, true);
+        fade.CrossFadeAlpha(255, 1, true);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("GameScene");
     }

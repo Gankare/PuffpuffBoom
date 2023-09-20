@@ -43,29 +43,26 @@ public class RoomScript : MonoBehaviour
         
         if (level == 1 && enemiesDead >= 1)
         {
+            enemiesDead = 0;
             pauseTimer = 0;
             level = 2; 
-            enemiesDead = 0;
-            Debug.Log("next level");
         }
         else if (level == 2 && enemiesDead >= 2)
         {
+            enemiesDead = 0;
             pauseTimer = 0;
             level = 3;
-            enemiesDead = 0;
         }
         else if (level == 3 && enemiesDead >= 3)
         {
+            enemiesDead = 0;
             pauseTimer = 0;
             level = 4;
-            enemiesDead = 0;
         }
         else if (level == 4 && enemiesDead >= 4)
         {
             //Spawn boss or win game
         }
-
-        //
       
         for (int i = 0; i < level; i++)
         {
