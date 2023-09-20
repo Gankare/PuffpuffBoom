@@ -33,6 +33,9 @@ public class StressScript : MonoBehaviour
             var explosionManager = FindObjectOfType<ExplosionSpawnerScript>();
             if(explosionManager == null) { Debug.Log("NO EXPLOSION MANAGER PREFAB IN SCENE!"); }
             else { explosionManager.SpawnExplosion(this.transform.position); }
+
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+
             FindObjectOfType<UIScript>().RespawnMethod();
             Destroy(this.gameObject);
         }
