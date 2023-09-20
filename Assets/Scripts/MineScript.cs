@@ -23,6 +23,9 @@ public class MineScript : MonoBehaviour
             if(explosionManager == null) { Debug.Log("NO EXPLOSION MANAGER PREFAB IN SCENE!"); }
             else { explosionManager.SpawnExplosion(this.transform.position); }
 
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+
+
             Destroy(this.gameObject);
         }
     }

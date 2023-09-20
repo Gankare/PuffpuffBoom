@@ -69,6 +69,7 @@ public class EnemyScript : MonoBehaviour
             if(currentHealth <= 0)
             {
                 RoomScript.enemiesDead++;
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
 
@@ -93,6 +94,8 @@ public class EnemyScript : MonoBehaviour
             if (currentHealth <= 0)
             {
                 RoomScript.enemiesDead++;
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+                Debug.Log("ENEMY DEAD");
                 Destroy(this.gameObject);
             }
 
