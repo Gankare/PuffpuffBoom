@@ -20,6 +20,7 @@ public class PauseGameScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && !gameSlowed)
             {
+
                 gameSlowed = true;
             }
             else if (Input.GetKeyDown(KeyCode.Space) && gameSlowed)
@@ -28,6 +29,7 @@ public class PauseGameScript : MonoBehaviour
             }
             if (gameSlowed)
             {
+                FindObjectOfType<UIScript>().FadeImage(true);
                 stressScript.ChangeStressAmount(slowedAnger);
                 Time.timeScale = 0.1f;
             }
@@ -45,6 +47,11 @@ public class PauseGameScript : MonoBehaviour
             Time.timeScale = 0;
         }
         else if(!gamePaused && !gameSlowed || stressScript.currentStress >= stressScript.maxStress)
+        {
+            FindObjectOfType<UIScript>().FadeImage(false);
             Time.timeScale = 1;
+
+        }
+
     }
 }
