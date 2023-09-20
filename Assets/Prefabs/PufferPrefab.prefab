@@ -193,7 +193,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 1595307684940003384, guid: 0007001f85e5c41489806816827016a5, type: 3}
   shootSpeed: 2
   reloadTimeAmount: 0.5
-  currentAmmo: 8
+  currentAmmo: 5
   maxAmmo: 5
   childRotation: {fileID: 6154876794409598343}
 --- !u!58 &2959755804734908392

@@ -32,6 +32,7 @@ public class UIScript : MonoBehaviour
         }
         for (int i = 0; i < playerShootingScript.currentAmmo; i++)
         {
+            //Debug.Log(i);
             ammoCounterArray[i].SetActive(true);
         }
     }
