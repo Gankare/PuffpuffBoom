@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PauseGameScript : MonoBehaviour
 {
+    public GameObject pasueMenu;
     public static bool gameSlowed = false;
     public static bool gamePaused = false;
 
@@ -37,10 +38,12 @@ public class PauseGameScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused)
         {
             gamePaused = true;
+            pasueMenu.SetActive(true); 
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && gamePaused)
         {
             gamePaused = false;
+            pasueMenu.SetActive(false);
         }
         if (gamePaused)
         {
@@ -50,8 +53,6 @@ public class PauseGameScript : MonoBehaviour
         {
             FindObjectOfType<UIScript>().FadeImage(false);
             Time.timeScale = 1;
-
         }
-
     }
 }
