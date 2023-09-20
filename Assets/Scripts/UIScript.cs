@@ -11,6 +11,8 @@ public class UIScript : MonoBehaviour
 
     ShootingScript playerShootingScript;
 
+    public Animator fadeAnim;
+
     private void Start()
     {
         playerShootingScript = FindObjectOfType<ShootingScript>();
@@ -46,6 +48,12 @@ public class UIScript : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(0);
+    }
+
+
+    public void FadeImage(bool fadeIn)
+    {
+        fadeAnim.SetBool("FadeIn", fadeIn);
     }
 
 }
