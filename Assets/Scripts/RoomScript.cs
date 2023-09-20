@@ -23,6 +23,7 @@ public class RoomScript : MonoBehaviour
     public Transform room3PlayerPos;
     public Transform room4PlayerPos;
     public TilemapCollider2D rockTileMap;
+    public GameObject doorColliders;
 
     private void Start()
     {
@@ -73,24 +74,28 @@ public class RoomScript : MonoBehaviour
 
         if(level == 2 && pauseTimer < 4)
         {
+            doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room2PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
         else if (level == 3 && pauseTimer < 4)
         {
+            doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room3PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
         else if (level == 4 && pauseTimer < 4)
         {
+            doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room4PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
         else
         {
+            doorColliders.SetActive(true);
             rockTileMap.enabled = true;
             nextRoomPause = false;
         }
