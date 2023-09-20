@@ -24,12 +24,8 @@ public class ShootingScript : MonoBehaviour
     {
         cam = FindObjectOfType<Camera>();
         currentAmmo = maxAmmo;
-
         UI_script = FindObjectOfType<UIScript>();
-
-
         UI_script.UpdateAmmoCounter();
-
     }
 
     void Update()
@@ -44,10 +40,13 @@ public class ShootingScript : MonoBehaviour
             reloadTimer = 0;
             UI_script.UpdateAmmoCounter();
         }
-        if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            reloadTimer = 0;
-            Shoot();
+        if (!RoomScript.nextRoomPause && !PauseGameScript.gamePaused)
+        { 
+            if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                reloadTimer = 0;
+                Shoot();
+            }
         }
     }
     private void Shoot()
