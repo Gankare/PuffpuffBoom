@@ -33,7 +33,7 @@ public class PostScript : MonoBehaviour
             vignette.intensity.value += vignetteValue;
             volume.profile.TryGetSettings(out colorGrading);
             colorGrading.postExposure.value -= colorGradingValue;
-            i -= 2;
+            i -= 1;
         }
     }
 }

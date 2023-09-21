@@ -62,5 +62,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4656de93255a534795f282110e2ff25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vignetteValue: 0.003
-  colorGradingValue: 0.05
+  vignetteValue: 0.0015
+  colorGradingValue: 0.035
