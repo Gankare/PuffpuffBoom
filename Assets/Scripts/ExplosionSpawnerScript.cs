@@ -7,6 +7,7 @@ public class ExplosionSpawnerScript : MonoBehaviour
     public GameObject KABOOM_prefab;
     public GameObject bubbleExplosion;
     public GameObject smallBubbleExplosion;
+    public GameObject bossBubbleExplosion;
 
     public void SpawnExplosion(Vector3 position)
     {
@@ -34,7 +35,14 @@ public class ExplosionSpawnerScript : MonoBehaviour
         Debug.Log("Spawned bubble explosion");
 
     }
+    public void SpawnBossBubbleExplosion(Vector3 position)
+    {
+        Vector3 spawnPos = new Vector3(position.x, position.y, -5);
+        GameObject newExplosion = Instantiate(bossBubbleExplosion, spawnPos, transform.rotation);
+        Destroy(newExplosion, 6f);
+        Debug.Log("Spawned bubble explosion");
 
+    }
 
     private void Update()
     {

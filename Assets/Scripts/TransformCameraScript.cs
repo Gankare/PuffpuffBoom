@@ -8,6 +8,7 @@ public class TransformCameraScript : MonoBehaviour
     public Transform room2;
     public Transform room3;
     public Transform room4;
+    public Transform room5;
 
     public CameraShakeScript mainCamShake;
 
@@ -31,6 +32,11 @@ public class TransformCameraScript : MonoBehaviour
         {
             mainCamShake.SetNewBasePosition(room4.position);
             transform.position = Vector3.MoveTowards(transform.position, room4.position, speed * Time.deltaTime);
+        }
+        else if (RoomScript.level == 5)
+        {
+            mainCamShake.SetNewBasePosition(room5.position);
+            transform.position = Vector3.MoveTowards(transform.position, room5.position, speed * Time.deltaTime);
         }
     }
 }

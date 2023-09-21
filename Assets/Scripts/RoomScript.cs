@@ -14,8 +14,7 @@ public class RoomScript : MonoBehaviour
     public int enemiesInRoom2;
     public int enemiesInRoom3;
     public int enemiesInRoom4;
-
-
+    public int enemiesInRoom5;
 
     //For camera movement
     public static int level;
@@ -30,6 +29,7 @@ public class RoomScript : MonoBehaviour
     public Transform room2PlayerPos;
     public Transform room3PlayerPos;
     public Transform room4PlayerPos;
+    public Transform room5PlayerPos;
     public TilemapCollider2D rockTileMap;
     public GameObject doorColliders;
 
@@ -71,7 +71,10 @@ public class RoomScript : MonoBehaviour
         }
         else if (level == 4 && enemiesDead >= enemiesInRoom4)
         {
-            Debug.Log("YOU WON GOOD JOB");
+            enemiesDead = 0;
+            pauseTimer = 0;
+            level = 5;
+            Debug.Log("LEVEL 5");
         }
     }
 
@@ -82,6 +85,7 @@ public class RoomScript : MonoBehaviour
         
         for (int i = 0; i < level; i++)
         {
+            Debug.Log(i);
             rooms[i].SetActive(true);
         }
 
@@ -105,6 +109,15 @@ public class RoomScript : MonoBehaviour
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room4PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
+        }
+        else if (level == 5 && pauseTimer < 4)
+        {
+            doorColliders.SetActive(false);
+            rockTileMap.enabled = false;
+            nextRoomPause = true;
+            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room5PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
+            rooms[5].SetActive(true);
+
         }
         else
         {

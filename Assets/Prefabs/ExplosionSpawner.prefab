@@ -47,3 +47,4 @@ MonoBehaviour:
   KABOOM_prefab: {fileID: 5043040171314614659, guid: 076ca2299f8a66f4c99e7c7209915de9, type: 3}
   bubbleExplosion: {fileID: 7481780719579773491, guid: 7fd6761a7b39c0b40adb3bfa05d70b91, type: 3}
   smallBubbleExplosion: {fileID: 503707734336533235, guid: 9417ea65a85205941b68757c90733f22, type: 3}
+  bossBubbleExplosion: {fileID: 4551725272425675658, guid: 22468c41eb26da246a483168870f2c5c, type: 3}
