@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cee3b2d75d22b4d26b7488c8d7fb5999
+guid: 99d66ccadf89d46cdb0b1fe3f27b46ec
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_0
+      name: Ink Bullet Sprite Sheet-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c955174d94b60435b8ea523074f35eda
-      internalID: 50014501
+      spriteID: 78e9bb91de8284af5b9c15d977a5f77f
+      internalID: 1876955640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_1
+      name: Ink Bullet Sprite Sheet-Sheet_1
       rect:
         serializedVersion: 2
         x: 24
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6fab593b79c3479baf0390881c77626
-      internalID: 680254862
+      spriteID: b6124b8c1d15540f78a1a02efac20f42
+      internalID: -1495835134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_2
+      name: Ink Bullet Sprite Sheet-Sheet_2
       rect:
         serializedVersion: 2
         x: 48
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 238602778428147309be2f4fedfb4d80
-      internalID: -1024474852
+      spriteID: e797e4db026454f0a9b4c9fd820c0b23
+      internalID: -1980083156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_3
+      name: Ink Bullet Sprite Sheet-Sheet_3
       rect:
         serializedVersion: 2
         x: 72
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fccf0c1ac74c641d78e98436837cff06
-      internalID: 707471836
+      spriteID: c99ee58f46f414fd4bce7824e5d83b3b
+      internalID: 1781313778
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_4
+      name: Ink Bullet Sprite Sheet-Sheet_4
       rect:
         serializedVersion: 2
         x: 96
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6385ad10b6494b95a0d0d8e0dabfb34
-      internalID: -788029537
+      spriteID: 029a17d71bf85487d80375e2b7699242
+      internalID: -1205918741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_5
+      name: Ink Bullet Sprite Sheet-Sheet_5
       rect:
         serializedVersion: 2
         x: 120
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eab5616c9649b43e08feab5e6818cc2d
-      internalID: -847726319
+      spriteID: 61a8320121a8143d9ba15581275ee353
+      internalID: -1957861869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_6
+      name: Ink Bullet Sprite Sheet-Sheet_6
       rect:
         serializedVersion: 2
         x: 144
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad42de898f65a4e1ab59295f04585e12
-      internalID: -797258184
+      spriteID: 5bf54adae2c914cdf8acc5b11b9f9f8e
+      internalID: -115997731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_7
+      name: Ink Bullet Sprite Sheet-Sheet_7
       rect:
         serializedVersion: 2
         x: 168
@@ -271,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f58181e221e40bfa668c242db02068
-      internalID: -313688444
+      spriteID: 5828579bbde7944a2af0d13150a23176
+      internalID: 1126596277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ink Bullet Sprite Sheet-Sheet 1_8
+      name: Ink Bullet Sprite Sheet-Sheet_8
       rect:
         serializedVersion: 2
         x: 192
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 350673126870f4983aa9f6b1b0960ff3
-      internalID: -476179251
+      spriteID: faea55fddf2de43299ab100e4be4de18
+      internalID: 837019175
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ink Bullet Sprite Sheet-Sheet 1_0: 50014501
-      Ink Bullet Sprite Sheet-Sheet 1_1: 680254862
-      Ink Bullet Sprite Sheet-Sheet 1_2: -1024474852
-      Ink Bullet Sprite Sheet-Sheet 1_3: 707471836
-      Ink Bullet Sprite Sheet-Sheet 1_4: -788029537
-      Ink Bullet Sprite Sheet-Sheet 1_5: -847726319
-      Ink Bullet Sprite Sheet-Sheet 1_6: -797258184
-      Ink Bullet Sprite Sheet-Sheet 1_7: -313688444
-      Ink Bullet Sprite Sheet-Sheet 1_8: -476179251
+      Ink Bullet Sprite Sheet-Sheet_0: 1876955640
+      Ink Bullet Sprite Sheet-Sheet_1: -1495835134
+      Ink Bullet Sprite Sheet-Sheet_2: -1980083156
+      Ink Bullet Sprite Sheet-Sheet_3: 1781313778
+      Ink Bullet Sprite Sheet-Sheet_4: -1205918741
+      Ink Bullet Sprite Sheet-Sheet_5: -1957861869
+      Ink Bullet Sprite Sheet-Sheet_6: -115997731
+      Ink Bullet Sprite Sheet-Sheet_7: 1126596277
+      Ink Bullet Sprite Sheet-Sheet_8: 837019175
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
