@@ -94,7 +94,7 @@ public class SquidEnemyScript : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                RoomScript.enemiesDead++;
+                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
@@ -114,7 +114,7 @@ public class SquidEnemyScript : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                RoomScript.enemiesDead++;
+                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
