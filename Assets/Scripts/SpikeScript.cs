@@ -9,6 +9,9 @@ public class SpikeScript : MonoBehaviour
     public int damage;
 
     private float timer;
+
+    public bool isEnemyBullet;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -30,10 +33,15 @@ public class SpikeScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Rocks")
+        if(collision.gameObject.tag == "Player" && isEnemyBullet)
         {
-            Explode();
+            collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(damage);
+            Destroy(this.gameObject);
+        }
+
+        if(collision.gameObject.tag == "Rocks")
+        {
+            Destroy(this.gameObject);
         }
     }
-
 }

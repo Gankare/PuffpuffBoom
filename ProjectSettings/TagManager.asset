@@ -6,17 +6,18 @@ TagManager:
   tags:
   - Spike
   - Rocks
+  - InkBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
   - Spike
   - Player
   - PostProcessingLayer
-  - 
+  - EnemyBullet
   - 
   - 
   - 
