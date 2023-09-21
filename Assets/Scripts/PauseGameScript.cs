@@ -42,8 +42,7 @@ public class PauseGameScript : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && gamePaused)
         {
-            gamePaused = false;
-            pasueMenu.SetActive(false);
+            Resume();
         }
         if (gamePaused)
         {
@@ -56,5 +55,10 @@ public class PauseGameScript : MonoBehaviour
             FindObjectOfType<UIScript>().FadeImage(false);
             Time.timeScale = 1;
         }
+    }
+    public void Resume()
+    {
+        gamePaused = false;
+        pasueMenu.SetActive(false);
     }
 }
