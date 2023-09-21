@@ -43,5 +43,9 @@ public class SpikeScript : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.tag == "Mine")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
