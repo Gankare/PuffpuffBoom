@@ -10,6 +10,10 @@ public class StressScript : MonoBehaviour
 
     UIScript stressBarScript;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite stressedSprite;
+    public Sprite normalStress;
+
 
     private void Start()
     {
@@ -24,8 +28,16 @@ public class StressScript : MonoBehaviour
         currentStress += stressAmount;
         stressBarScript.UpdateStressBar(currentStress, maxStress);
 
+        if(currentStress > maxStress / 2)
+        {
+            spriteRenderer.sprite = stressedSprite;
+        }
+        if(currentStress < maxStress / 2)
+        {
+            spriteRenderer.sprite = normalStress;
+        }
 
-        if(stressAmount > 0) { FlashRed(); }
+        if (stressAmount > 0) { FlashRed(); }
 
         if(currentStress >= maxStress)
         {
@@ -56,4 +68,12 @@ public class StressScript : MonoBehaviour
     {
         sprite_renderer.color = origionalColor;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("OUCH");
+
+
+    }
+
 }
