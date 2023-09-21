@@ -58,7 +58,6 @@ public class EnemyScript : MonoBehaviour
         else if(rB != null)
             rB.velocity = Vector2.zero;
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spike")
@@ -72,7 +71,6 @@ public class EnemyScript : MonoBehaviour
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
-
             FlashRed();
         }
 
@@ -88,7 +86,6 @@ public class EnemyScript : MonoBehaviour
 
             collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(stressAmountToApplyToPlayer);
 
-
             currentHealth -= 1;
 
             if (currentHealth <= 0)
@@ -98,12 +95,8 @@ public class EnemyScript : MonoBehaviour
                 Debug.Log("ENEMY DEAD");
                 Destroy(this.gameObject);
             }
-
-
             FlashRed();
-
         }
-
     }
 
     public float flashTime;
