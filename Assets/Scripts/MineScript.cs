@@ -24,7 +24,7 @@ public class MineScript : MonoBehaviour
             else { explosionManager.SpawnExplosion(this.transform.position); }
 
             FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
-
+            FindObjectOfType<CameraShakeScript>().TriggerShake();
 
             Destroy(this.gameObject);
         }

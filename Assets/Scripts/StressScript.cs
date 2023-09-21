@@ -48,6 +48,7 @@ public class StressScript : MonoBehaviour
 
             FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
 
+            FindObjectOfType<CameraShakeScript>().TriggerShake();
             FindObjectOfType<UIScript>().RespawnMethod();
             Destroy(this.gameObject);
         }
