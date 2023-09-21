@@ -6,6 +6,7 @@ public class EnemyScript : MonoBehaviour
 {
     public float movementSpeed = 10;
     public float maxMovementSpeed = 10;
+    public float reducedMovementSpeed = 4;
 
     public float knockBackPower;
     public float selfKnockBackPower;
@@ -61,12 +62,12 @@ public class EnemyScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Rocks")
-            movementSpeed = 4;
+            movementSpeed = reducedMovementSpeed;
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Rocks")
-            movementSpeed = 10;
+            movementSpeed = maxMovementSpeed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

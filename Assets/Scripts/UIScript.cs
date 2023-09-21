@@ -47,7 +47,7 @@ public class UIScript : MonoBehaviour
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("GameScene");
     }
 
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7390745032984116703}
   - component: {fileID: 5526872214599272072}
   - component: {fileID: -6704334626924855712}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DolphinEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9cedbc44ad6c847a191ddcc60c0088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
-  maxMovementSpeed: 10
+  movementSpeed: 7
+  maxMovementSpeed: 7
+  reducedMovementSpeed: 3
   knockBackPower: 200
   selfKnockBackPower: 500
   stressAmountToApplyToPlayer: 1

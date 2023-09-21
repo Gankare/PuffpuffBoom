@@ -40,7 +40,12 @@ public class SquidEnemyScript : MonoBehaviour
             direction.Normalize();
         }
 
-        if(shootTimer >= 0)
+        if (RoomScript.nextRoomPause)
+        {
+            return;
+        }
+
+        if (shootTimer >= 0)
         {
             shootTimer -= Time.deltaTime;
         }
