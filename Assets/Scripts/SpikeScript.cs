@@ -36,15 +36,18 @@ public class SpikeScript : MonoBehaviour
         if(collision.gameObject.tag == "Player" && isEnemyBullet)
         {
             collision.gameObject.GetComponent<StressScript>().ChangeStressAmount(damage);
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnSmallBubbleExplosion(this.transform.position);
             Destroy(this.gameObject);
         }
 
         if(collision.gameObject.tag == "Rocks")
         {
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnSmallBubbleExplosion(this.transform.position);
             Destroy(this.gameObject);
         }
         if (collision.gameObject.tag == "Mine")
         {
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnSmallBubbleExplosion(this.transform.position);
             Destroy(this.gameObject);
         }
     }

@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2000
+  playerCollider: {fileID: 2959755804734908392}
 --- !u!114 &871898557781601085
 MonoBehaviour:
   m_ObjectHideFlags: 0

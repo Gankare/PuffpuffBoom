@@ -9,9 +9,12 @@ public class MovementScript : MonoBehaviour
     private Vector2 acceleration;
     private Vector2 velocity;
     public float speed = 500;
-    
+    public Collider2D playerCollider;
+    RoomScript roomScript;
+
     void Start()
     {
+        roomScript = FindObjectOfType<RoomScript>();
         position = transform.position;
         rigidBody = GetComponent<Rigidbody2D>();
     }
@@ -53,6 +56,16 @@ public class MovementScript : MonoBehaviour
             }
             else
                 rigidBody.velocity = Vector2.zero;
+        }
+
+
+        if (RoomScript.nextRoomPause)
+        {
+            playerCollider.enabled = false;
+        }
+        else
+        {
+            playerCollider.enabled = true;
         }
     }
     private void FixedUpdate()
