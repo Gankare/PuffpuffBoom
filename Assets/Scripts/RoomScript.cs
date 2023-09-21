@@ -108,7 +108,7 @@ public class RoomScript : MonoBehaviour
         }
         else
         {
-            //doorColliders.SetActive(true);
+            doorColliders.SetActive(true);
             rockTileMap.enabled = true;
             nextRoomPause = false;
         }
