@@ -10,10 +10,10 @@ using static UnityEngine.GraphicsBuffer;
 public class RoomScript : MonoBehaviour
 {
     //Simple quick enemy counter
-    //public int enemiesInRoom1;
-    //public int enemiesInRoom2;
-    //public int enemiesInRoom3;
-    //public int enemiesInRoom4;
+    public int enemiesInRoom1;
+    public int enemiesInRoom2;
+    public int enemiesInRoom3;
+    public int enemiesInRoom4;
 
 
 
