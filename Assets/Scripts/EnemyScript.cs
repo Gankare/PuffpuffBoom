@@ -58,6 +58,16 @@ public class EnemyScript : MonoBehaviour
         else if(rB != null)
             rB.velocity = Vector2.zero;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Rocks")
+            movementSpeed = 4;
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Rocks")
+            movementSpeed = 10;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Spike")
