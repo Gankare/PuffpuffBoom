@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8fc0c0975d25f45a6c4a0790d56ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 5
   damage: 1
   isEnemyBullet: 1
 --- !u!1 &5441423984317710377
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -797258184, guid: cee3b2d75d22b4d26b7488c8d7fb5999, type: 3}
+  m_Sprite: {fileID: 1876955640, guid: 99d66ccadf89d46cdb0b1fe3f27b46ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
