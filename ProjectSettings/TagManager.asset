@@ -8,6 +8,7 @@ TagManager:
   - Rocks
   - Undefined
   - EnemyBullet
+  - Mine
   layers:
   - Default
   - TransparentFX
