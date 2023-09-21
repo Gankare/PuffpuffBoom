@@ -9,9 +9,11 @@ public class SceneHandlerScript : MonoBehaviour
 {
     public Image fade;
     public Image pufferFish;
+    private PauseGameScript pauseScript;
     private void Start()
     {
         fade.CrossFadeAlpha(1, 0, true);
+        pauseScript = FindObjectOfType<PauseGameScript>();
     }
 
     public void StartTutorial()
@@ -29,6 +31,10 @@ public class SceneHandlerScript : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+    public void ResumeGame()
+    {
+        pauseScript.Resume();
     }
     IEnumerator StartTutorialAfter()
     {
