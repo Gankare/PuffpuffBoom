@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossEnemy : MonoBehaviour
 {
     public float movementSpeed = 10;
-
+    private AudioSource electroBoltSound;
 
     public int maxHealth = 5;
     public int currentHealth;
@@ -18,6 +18,7 @@ public class BossEnemy : MonoBehaviour
 
     private void Start()
     {
+        electroBoltSound = GetComponent<AudioSource>();
         attackTarget = GameObject.FindGameObjectWithTag("Player").transform;
         if (attackTarget == null) { Debug.Log("The player does not have the Player tag on its gameobject, the enemies have no target and will not move."); }
 
@@ -74,7 +75,7 @@ public class BossEnemy : MonoBehaviour
             Vector3 enemyDir = transform.position - attackTarget.position;
             float angle = (Mathf.Atan2(enemyDir.y, enemyDir.x) * Mathf.Rad2Deg) + 90;
             var rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
+            electroBoltSound.PlayOneShot(electroBoltSound.clip);
             Instantiate(ballPrefab, transform.position, rotation);
 
         }

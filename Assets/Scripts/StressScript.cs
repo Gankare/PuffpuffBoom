@@ -46,7 +46,7 @@ public class StressScript : MonoBehaviour
             if(explosionManager == null) { Debug.Log("NO EXPLOSION MANAGER PREFAB IN SCENE!"); }
             else { explosionManager.SpawnExplosion(this.transform.position); }
 
-            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
 
             FindObjectOfType<CameraShakeScript>().TriggerShake();
             FindObjectOfType<UIScript>().RespawnMethod();

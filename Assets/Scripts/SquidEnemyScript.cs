@@ -14,13 +14,13 @@ public class SquidEnemyScript : MonoBehaviour
     public float shootCoolDownAmount;
 
     public GameObject spikePrefab;
-
+    private AudioSource squidShoot;
     public Animator anim;
 
     private void Start()
     {
         currentHealth = maxHealth;
-
+        squidShoot = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if (target == null) { Debug.Log("The player does not have the Player tag on its gameobject, the enemies have no target and will not move."); }
     }
@@ -66,7 +66,7 @@ public class SquidEnemyScript : MonoBehaviour
 
         Instantiate(spikePrefab, transform.position, rotation);
         anim.SetBool("Shoot", false);
-
+        squidShoot.PlayOneShot(squidShoot.clip);
     }
 
     public float flashTime;
@@ -95,7 +95,7 @@ public class SquidEnemyScript : MonoBehaviour
             if (currentHealth <= 0)
             {
                 FindObjectOfType<RoomScript>().KilledEnemy();
-                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
             FlashRed();
@@ -115,7 +115,7 @@ public class SquidEnemyScript : MonoBehaviour
             if (currentHealth <= 0)
             {
                 FindObjectOfType<RoomScript>().KilledEnemy();
-                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
             FlashRed();

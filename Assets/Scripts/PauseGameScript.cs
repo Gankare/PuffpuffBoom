@@ -11,6 +11,8 @@ public class PauseGameScript : MonoBehaviour
     private StressScript stressScript;
     public float slowedAnger;
 
+    public AudioSource slowTime;
+
     private void Start()
     {
         stressScript = FindAnyObjectByType<StressScript>();
@@ -21,12 +23,13 @@ public class PauseGameScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space) && !gameSlowed)
             {
-
                 gameSlowed = true;
+                slowTime.Play();
             }
             else if (Input.GetKeyDown(KeyCode.Space) && gameSlowed)
             {
                 gameSlowed = false;
+                slowTime.Stop();
             }
             if (gameSlowed)
             {

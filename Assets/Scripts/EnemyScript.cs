@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -16,12 +17,14 @@ public class EnemyScript : MonoBehaviour
     public int currentHealth;
 
     public Transform target;
+    private AudioSource AttackSound;
     private Rigidbody2D rB;
 
     private bool isGettingKnockedBack;
 
     private void Start()
     {
+        AttackSound = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if(target == null) { Debug.Log("The player does not have the Player tag on its gameobject, the enemies have no target and will not move."); }
 
@@ -79,7 +82,7 @@ public class EnemyScript : MonoBehaviour
             if(currentHealth <= 0)
             {
                 FindObjectOfType<RoomScript>().KilledEnemy();
-                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
             FlashRed();
@@ -87,6 +90,7 @@ public class EnemyScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            AttackSound.Play();
             Vector3 moveDirection = rB.transform.position - collision.transform.position;
 
             isGettingKnockedBack = true;
@@ -102,7 +106,7 @@ public class EnemyScript : MonoBehaviour
             if (currentHealth <= 0)
             {
                 FindObjectOfType<RoomScript>().KilledEnemy();
-                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Debug.Log("ENEMY DEAD");
                 Destroy(this.gameObject);
             }

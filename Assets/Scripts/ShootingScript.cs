@@ -12,7 +12,7 @@ public class ShootingScript : MonoBehaviour
     private float reloadTimer;
     public float reloadTimeAmount;
 
-
+    private AudioSource shootSound;
     public int currentAmmo = 5;
     public int maxAmmo = 5;
     public GameObject childRotation;
@@ -22,6 +22,7 @@ public class ShootingScript : MonoBehaviour
 
     private void Start()
     {
+        shootSound = GetComponent<AudioSource>();
         cam = FindObjectOfType<Camera>();
         currentAmmo = maxAmmo;
         UI_script = FindObjectOfType<UIScript>();
@@ -44,6 +45,7 @@ public class ShootingScript : MonoBehaviour
         { 
             if (currentAmmo > 0 && Input.GetKeyDown(KeyCode.Mouse0))
             {
+                shootSound.PlayOneShot(shootSound.clip);
                 reloadTimer = 0;
                 Shoot();
             }

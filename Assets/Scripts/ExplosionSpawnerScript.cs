@@ -8,7 +8,14 @@ public class ExplosionSpawnerScript : MonoBehaviour
     public GameObject bubbleExplosion;
     public GameObject smallBubbleExplosion;
     public GameObject bossBubbleExplosion;
+    private AudioSource bombSound;
+    public AudioSource deathSound;
+    public AudioSource bossDeathSound;
 
+    private void Start()
+    {
+        bombSound = GetComponent<AudioSource>();
+    }
     public void SpawnExplosion(Vector3 position)
     {
         Vector3 spawnPos = new Vector3(position.x, position.y, -6);
@@ -18,13 +25,21 @@ public class ExplosionSpawnerScript : MonoBehaviour
         Destroy(newExplosion, 1f);
         Debug.Log("Spawned explosion");
     }
-
+    public void SpawnBubble(Vector3 position)
+    {
+        Vector3 spawnPos = new Vector3(position.x, position.y, -5);
+        GameObject newExplosion = Instantiate(bubbleExplosion, spawnPos, transform.rotation);
+        Destroy(newExplosion, 1f);
+        Debug.Log("Spawned bubble explosion");
+        deathSound.Play();
+    }
     public void SpawnBubbleExplosion(Vector3 position)
     {
         Vector3 spawnPos = new Vector3(position.x, position.y, -5);
         GameObject newExplosion = Instantiate(bubbleExplosion, spawnPos, transform.rotation);
         Destroy(newExplosion, 1f);
         Debug.Log("Spawned bubble explosion");
+        bombSound.Play();
     }
 
     public void SpawnSmallBubbleExplosion(Vector3 position)
@@ -41,7 +56,7 @@ public class ExplosionSpawnerScript : MonoBehaviour
         GameObject newExplosion = Instantiate(bossBubbleExplosion, spawnPos, transform.rotation);
         Destroy(newExplosion, 6f);
         Debug.Log("Spawned bubble explosion");
-
+        bossDeathSound.Play();
     }
 
     private void Update()

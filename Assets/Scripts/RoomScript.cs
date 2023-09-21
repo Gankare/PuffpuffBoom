@@ -45,8 +45,6 @@ public class RoomScript : MonoBehaviour
             rooms[i].SetActive(false);
         }
     }
-
-
     public void KilledEnemy()
     {
         enemiesDead++;
@@ -77,7 +75,6 @@ public class RoomScript : MonoBehaviour
             Debug.Log("LEVEL 5");
         }
     }
-
 
     private void Update()
     {
