@@ -9,6 +9,14 @@ using static UnityEngine.GraphicsBuffer;
 
 public class RoomScript : MonoBehaviour
 {
+    //Simple quick enemy counter
+    public int enemiesInRoom1;
+    public int enemiesInRoom2;
+    public int enemiesInRoom3;
+    public int enemiesInRoom4;
+
+
+
     //For camera movement
     public static int level;
     public static int enemiesDead;
@@ -37,33 +45,41 @@ public class RoomScript : MonoBehaviour
             rooms[i].SetActive(false);
         }
     }
-    private void Update()
+
+
+    public void KilledEnemy()
     {
-        pauseTimer += Time.deltaTime;
-        
-        if (level == 1 && enemiesDead >= 1)
+        enemiesDead++;
+
+        if (level == 1 && enemiesDead >= enemiesInRoom1)
         {
             enemiesDead = 0;
             pauseTimer = 0;
-            level = 2; 
+            level = 2;
         }
-        else if (level == 2 && enemiesDead >= 2)
+        if (level == 2 && enemiesDead >= enemiesInRoom2)
         {
             enemiesDead = 0;
             pauseTimer = 0;
             level = 3;
         }
-        else if (level == 3 && enemiesDead >= 3)
+        if (level == 3 && enemiesDead >= enemiesInRoom3)
         {
             enemiesDead = 0;
             pauseTimer = 0;
             level = 4;
         }
-        else if (level == 4 && enemiesDead >= 4)
+        else if (level == 4 && enemiesDead >= enemiesInRoom4)
         {
-            //Spawn boss or win game
+            Debug.Log("YOU WON GOOD JOB");
         }
-      
+    }
+
+
+    private void Update()
+    {
+        pauseTimer += Time.deltaTime;
+        
         for (int i = 0; i < level; i++)
         {
             rooms[i].SetActive(true);
