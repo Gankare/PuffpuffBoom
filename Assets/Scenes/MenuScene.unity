@@ -357,8 +357,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282683386
-  m_fontColor: {r: 0.9803922, g: 0.56078434, b: 0.26666668, a: 1}
+    rgba: 4281697279
+  m_fontColor: {r: 1, g: 0.5137255, b: 0.20784315, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -569,7 +569,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 173469251}
         m_TargetAssemblyTypeName: SceneHandlerScript, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

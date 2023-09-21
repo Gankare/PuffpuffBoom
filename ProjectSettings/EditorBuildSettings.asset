@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/TestFilip.unity
     guid: 0041aa6757454924dab41e5bfac30f43
   - enabled: 1
-    path: Assets/Scenes/GameScene.unity
-    guid: 311936948e186bb47bae0cbd000e3922
-  - enabled: 1
     path: Assets/Scenes/MenuScene.unity
     guid: 6232e210e4f6c9e45a57d81a7292ae18
+  - enabled: 1
+    path: Assets/Scenes/TutorialScene.unity
+    guid: cf06e5c467883f64c829d2961df03415
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 311936948e186bb47bae0cbd000e3922
   m_configObjects: {}
