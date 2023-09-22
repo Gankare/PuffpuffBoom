@@ -8,7 +8,7 @@ public class UIScript : MonoBehaviour
 {
     public Image stressBarImage;
     public GameObject[] ammoCounterArray;
-
+    public GameObject victoryMenu;
     ShootingScript playerShootingScript;
 
     public Animator fadeAnim;
@@ -18,7 +18,23 @@ public class UIScript : MonoBehaviour
         playerShootingScript = FindObjectOfType<ShootingScript>();
         UpdateAmmoCounter();
     }
+    public void FixedUpdate()
+    {
+        if(BossEnemy.GameWon == true)
+        {
+            GameWon();
+        }
+    }
 
+    public void GameWon()
+    {
+        StartCoroutine(VictoryScreen());
+    }
+    IEnumerator VictoryScreen()
+    {
+        yield return new WaitForSeconds(3);
+        victoryMenu.SetActive(true);
+    }
     public void UpdateStressBar(float currentStress, float maxStress)
     {
         stressBarImage.fillAmount = currentStress / maxStress;

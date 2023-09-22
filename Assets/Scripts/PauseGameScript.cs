@@ -19,44 +19,53 @@ public class PauseGameScript : MonoBehaviour
     }
     void Update()
     {
-        if (!gamePaused)
+        if (!BossEnemy.GameWon) 
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !gameSlowed)
+            if (!gamePaused)
             {
-                gameSlowed = true;
-                slowTime.Play();
+                if (Input.GetKeyDown(KeyCode.Space) && !gameSlowed)
+                {
+                    gameSlowed = true;
+                    slowTime.Play();
+                }
+                else if (Input.GetKeyDown(KeyCode.Space) && gameSlowed)
+                {
+                    gameSlowed = false;
+                    slowTime.Stop();
+                }
+                if (gameSlowed)
+                {
+                    FindObjectOfType<UIScript>().FadeImage(true);
+                    stressScript.ChangeStressAmount(slowedAnger);
+                    Time.timeScale = 0.1f;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.Space) && gameSlowed)
+            if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused)
             {
+                gamePaused = true;
+                pasueMenu.SetActive(true); 
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && gamePaused)
+            {
+                Resume();
+            }
+            if (gamePaused)
+            {
+                Time.timeScale = 0;
+            }
+            else if(!gamePaused && !gameSlowed || stressScript.currentStress >= stressScript.maxStress)
+            {
+                gamePaused = false;
                 gameSlowed = false;
-                slowTime.Stop();
-            }
-            if (gameSlowed)
-            {
-                FindObjectOfType<UIScript>().FadeImage(true);
-                stressScript.ChangeStressAmount(slowedAnger);
-                Time.timeScale = 0.1f;
+                FindObjectOfType<UIScript>().FadeImage(false);
+                Time.timeScale = 1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape) && !gamePaused)
+        else if(BossEnemy.GameWon)
         {
-            gamePaused = true;
-            pasueMenu.SetActive(true); 
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && gamePaused)
-        {
-            Resume();
-        }
-        if (gamePaused)
-        {
-            Time.timeScale = 0;
-        }
-        else if(!gamePaused && !gameSlowed || stressScript.currentStress >= stressScript.maxStress)
-        {
-            gamePaused = false;
+            gamePaused = false; 
             gameSlowed = false;
-            FindObjectOfType<UIScript>().FadeImage(false);
-            Time.timeScale = 1;
+            pasueMenu.SetActive(false);
         }
     }
     public void Resume()

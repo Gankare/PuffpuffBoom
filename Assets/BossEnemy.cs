@@ -13,8 +13,8 @@ public class BossEnemy : MonoBehaviour
     public Transform attackTarget;
     public Transform[] moveTarget;
     public Rigidbody2D rB;
-
     public GameObject boosObject;
+    public static bool GameWon = false;
 
     private void Start()
     {
@@ -102,7 +102,7 @@ public class BossEnemy : MonoBehaviour
             if (currentHealth <= 0)
             {
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBossBubbleExplosion(this.gameObject.transform.position);
-
+                GameWon = true;
                 Destroy(boosObject);
             }
             FlashRed();

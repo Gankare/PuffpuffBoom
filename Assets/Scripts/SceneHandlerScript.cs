@@ -45,6 +45,7 @@ public class SceneHandlerScript : MonoBehaviour
     }
     IEnumerator StartGameAfter()
     {
+        BossEnemy.GameWon = false;
         fade.CrossFadeAlpha(255, 1, true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("GameScene");
