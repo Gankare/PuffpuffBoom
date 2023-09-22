@@ -66,6 +66,7 @@ public class PauseGameScript : MonoBehaviour
             gamePaused = false; 
             gameSlowed = false;
             pasueMenu.SetActive(false);
+            Time.timeScale = 0;
         }
     }
     public void Resume()
