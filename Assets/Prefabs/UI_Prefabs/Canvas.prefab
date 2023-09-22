@@ -985,7 +985,6 @@ GameObject:
   - component: {fileID: 1410449418204084450}
   - component: {fileID: 9042103465397014388}
   - component: {fileID: 5847186752382038385}
-  - component: {fileID: 211966234731011055}
   m_Layer: 5
   m_Name: Youwon text
   m_TagString: Untagged
@@ -1109,19 +1108,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &211966234731011055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2636602862567994414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98cf78dc3e21455458f4aa7830473474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiplier: 5
 --- !u!1 &2811066860297335134
 GameObject:
   m_ObjectHideFlags: 0
