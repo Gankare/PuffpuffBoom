@@ -34,18 +34,29 @@ public class BossEnemy : MonoBehaviour
 
     private float minShootRange = 0.3f;
 
+    public GameObject squidEnemy;
+    private bool hasSpawnedEnemy;
+    public Transform enemySpawnPos1;
+    public Transform enemySpawnPos2;
+
 
     private void Update()
     {
-
-
         if (RoomScript.nextRoomPause)
             return;
-
 
         if(currentHealth == maxHealth / 2)
         {
             minShootRange = 0.05f;
+            if (!hasSpawnedEnemy && enemySpawnPos1 != null && enemySpawnPos2 != null)
+            {
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(enemySpawnPos1.position);
+                Instantiate(squidEnemy, enemySpawnPos1.position, Quaternion.identity);
+
+                FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(enemySpawnPos2.position);
+                Instantiate(squidEnemy, enemySpawnPos2.position, Quaternion.identity);
+                hasSpawnedEnemy = true;
+            }
         }
 
 
@@ -58,7 +69,7 @@ public class BossEnemy : MonoBehaviour
             if(moveTargetID == 1) { moveTargetID = 0; }
             else if (moveTargetID == 0) { moveTargetID = 1; }
 
-            changeMoveDirTimer = Random.Range(0.5f, 2.0f);
+            changeMoveDirTimer = Random.Range(0.6f, 2.0f);
         }
 
 
