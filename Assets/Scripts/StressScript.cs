@@ -30,17 +30,17 @@ public class StressScript : MonoBehaviour
         currentStress += stressAmount;
         stressBarScript.UpdateStressBar(currentStress, maxStress);
 
-        if(currentStress > maxStress / 2)
+        if (currentStress > (maxStress / 2) - (maxStress / 4))
+        {
+            spriteRenderer.sprite = littleStressedSprite;
+        }
+        if (currentStress > maxStress / 2)
         {
             spriteRenderer.sprite = stressedSprite;
         }
         if (currentStress > (maxStress / 2) + (maxStress / 4))
         {
             spriteRenderer.sprite = bigStressedSprite;
-        }
-        if (currentStress > (maxStress / 2) - (maxStress / 4))
-        {
-            spriteRenderer.sprite = littleStressedSprite;
         }
         if (currentStress < (maxStress / 2) - (maxStress / 4) - 1)
         {
