@@ -11,7 +11,9 @@ public class StressScript : MonoBehaviour
     UIScript stressBarScript;
 
     public SpriteRenderer spriteRenderer;
+    public Sprite bigStressedSprite;
     public Sprite stressedSprite;
+    public Sprite littleStressedSprite;
     public Sprite normalStress;
 
 
@@ -32,7 +34,15 @@ public class StressScript : MonoBehaviour
         {
             spriteRenderer.sprite = stressedSprite;
         }
-        if(currentStress < maxStress / 2)
+        if (currentStress > (maxStress / 2) + (maxStress / 4))
+        {
+            spriteRenderer.sprite = bigStressedSprite;
+        }
+        if (currentStress > (maxStress / 2) - (maxStress / 4))
+        {
+            spriteRenderer.sprite = littleStressedSprite;
+        }
+        if (currentStress < (maxStress / 2) - (maxStress / 4) - 1)
         {
             spriteRenderer.sprite = normalStress;
         }
@@ -46,7 +56,7 @@ public class StressScript : MonoBehaviour
             if(explosionManager == null) { Debug.Log("NO EXPLOSION MANAGER PREFAB IN SCENE!"); }
             else { explosionManager.SpawnExplosion(this.transform.position); }
 
-            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
+            FindObjectOfType<ExplosionSpawnerScript>().SpawnBubbleExplosion(this.gameObject.transform.position);
 
             FindObjectOfType<CameraShakeScript>().TriggerShake();
             FindObjectOfType<UIScript>().RespawnMethod();
