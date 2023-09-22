@@ -102,9 +102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9cedbc44ad6c847a191ddcc60c0088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7
-  maxMovementSpeed: 7
-  reducedMovementSpeed: 3
+  movementSpeed: 5
+  maxMovementSpeed: 5
+  reducedMovementSpeed: 2
   knockBackPower: 200
   selfKnockBackPower: 500
   stressAmountToApplyToPlayer: 1
