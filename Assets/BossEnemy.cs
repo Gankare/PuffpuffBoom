@@ -32,7 +32,7 @@ public class BossEnemy : MonoBehaviour
 
     public GameObject ballPrefab;
 
-    private float minShootRange = 0.4f;
+    private float minShootRange = 0.3f;
 
 
     private void Update()
@@ -45,7 +45,7 @@ public class BossEnemy : MonoBehaviour
 
         if(currentHealth == maxHealth / 2)
         {
-            minShootRange = 0.1f;
+            minShootRange = 0.05f;
         }
 
 
@@ -60,8 +60,6 @@ public class BossEnemy : MonoBehaviour
 
             changeMoveDirTimer = Random.Range(0.5f, 2.0f);
         }
-
-
 
 
         if(shootTimer >= 0)
