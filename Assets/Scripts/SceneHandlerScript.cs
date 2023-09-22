@@ -30,6 +30,7 @@ public class SceneHandlerScript : MonoBehaviour
     }
     public void QuitGame()
     {
+        Debug.Log("GameQuit");
         Application.Quit();
     }
     public void ResumeGame()
@@ -52,6 +53,7 @@ public class SceneHandlerScript : MonoBehaviour
     }
     IEnumerator GoToMenuAfter()
     {
+        PauseGameScript.gamePaused = false;
         fade.CrossFadeAlpha(255, 1, true);
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("MenuScene");

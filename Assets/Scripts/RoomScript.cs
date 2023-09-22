@@ -82,7 +82,6 @@ public class RoomScript : MonoBehaviour
         
         for (int i = 0; i < level; i++)
         {
-            Debug.Log(i);
             rooms[i].SetActive(true);
         }
 
