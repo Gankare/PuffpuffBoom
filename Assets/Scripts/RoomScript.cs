@@ -113,7 +113,7 @@ public class RoomScript : MonoBehaviour
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room5PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
-            rooms[5].SetActive(true);
+            rooms[4].SetActive(true);
 
         }
         else
