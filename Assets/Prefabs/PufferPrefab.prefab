@@ -151,7 +151,9 @@ MonoBehaviour:
   maxStress: 11
   currentStress: 0
   spriteRenderer: {fileID: 4715260091905522435}
+  bigStressedSprite: {fileID: 21300000, guid: efe4d3a983287d14e8d361282be19aa5, type: 3}
   stressedSprite: {fileID: 21300000, guid: 6e1b0d373311da548a95a7c160cf2b6f, type: 3}
+  littleStressedSprite: {fileID: 21300000, guid: 725fbb80d94967649be336834bc4347d, type: 3}
   normalStress: {fileID: 21300000, guid: ca9db0372ddf5234392fd0b31562e741, type: 3}
   flashTime: 0.2
   origionalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -248,7 +250,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 676486a4d2b0e1a4fa0d7fd1892f7785, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
