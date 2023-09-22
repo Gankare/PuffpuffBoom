@@ -34,8 +34,6 @@ public class UIScript : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         victoryMenu.SetActive(true);
-        yield return new WaitForSeconds(1);
-        Time.timeScale = 0;
     }
 
 
