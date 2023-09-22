@@ -85,28 +85,28 @@ public class RoomScript : MonoBehaviour
             rooms[i].SetActive(true);
         }
 
-        if(level == 2 && pauseTimer < 4)
+        if(level == 2 && pauseTimer < 2.5)
         {
             doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room2PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 3 && pauseTimer < 4)
+        else if (level == 3 && pauseTimer < 2.5)
         {
             doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room3PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 4 && pauseTimer < 4)
+        else if (level == 4 && pauseTimer < 2.5)
         {
             doorColliders.SetActive(false);
             rockTileMap.enabled = false;
             nextRoomPause = true;
             playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room4PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 5 && pauseTimer < 4)
+        else if (level == 5 && pauseTimer < 2.5)
         {
             doorColliders.SetActive(false);
             rockTileMap.enabled = false;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4419404923590924886}
   - component: {fileID: 8970209849434737232}
   - component: {fileID: 544746279555389246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Lightning Projectile_0
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -609526795
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1472058676, guid: 7a9dc72ad739d4543aff659b69df5334, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

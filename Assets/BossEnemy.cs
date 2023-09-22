@@ -79,7 +79,7 @@ public class BossEnemy : MonoBehaviour
         }
         else
         {
-            shootTimer = Random.Range(minShootRange, 0.7f);
+            shootTimer = Random.Range(minShootRange, 0.5f);
 
             Vector3 enemyDir = transform.position - attackTarget.position;
             float angle = (Mathf.Atan2(enemyDir.y, enemyDir.x) * Mathf.Rad2Deg) + 90;
