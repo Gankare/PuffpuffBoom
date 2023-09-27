@@ -14,7 +14,7 @@ public class DoorScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (RoomScript.level == OpenAtLevel && !doorOpened)
+        if (RoomScript.currentLevel == OpenAtLevel && !doorOpened)
         {
             animator.SetTrigger("Open");
             doorOpened = true;

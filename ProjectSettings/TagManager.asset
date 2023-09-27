@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - EnemyBullet
   - Mine
+  - Enemy
   layers:
   - Default
   - TransparentFX

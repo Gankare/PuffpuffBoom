@@ -19,6 +19,7 @@ public class SquidEnemyScript : MonoBehaviour
 
     private void Start()
     {
+        gameObject.tag = ("Enemy");
         currentHealth = maxHealth;
         squidShoot = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -94,7 +95,6 @@ public class SquidEnemyScript : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
@@ -114,7 +114,6 @@ public class SquidEnemyScript : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }

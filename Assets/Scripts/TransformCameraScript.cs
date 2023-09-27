@@ -18,22 +18,22 @@ public class TransformCameraScript : MonoBehaviour
     }
     void Update()
     {
-        if (RoomScript.level == 2)
+        if (RoomScript.currentLevel + 1 == 2)
         {
             mainCamShake.SetNewBasePosition(room2.position);
             transform.position = Vector3.MoveTowards(transform.position, room2.position, speed * Time.deltaTime);
         }
-        else if (RoomScript.level == 3)
+        else if (RoomScript.currentLevel + 1 == 3)
         {
             mainCamShake.SetNewBasePosition(room3.position);
             transform.position = Vector3.MoveTowards(transform.position, room3.position, speed * Time.deltaTime);
         }
-        else if (RoomScript.level == 4)
+        else if (RoomScript.currentLevel + 1 == 4)
         {
             mainCamShake.SetNewBasePosition(room4.position);
             transform.position = Vector3.MoveTowards(transform.position, room4.position, speed * Time.deltaTime);
         }
-        else if (RoomScript.level == 5)
+        else if (RoomScript.currentLevel + 1 == 5)
         {
             mainCamShake.SetNewBasePosition(room5.position);
             transform.position = Vector3.MoveTowards(transform.position, room5.position, speed * Time.deltaTime);

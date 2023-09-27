@@ -24,6 +24,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Start()
     {
+        gameObject.tag = ("Enemy");
         AttackSound = GetComponent<AudioSource>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         if(target == null) { Debug.Log("The player does not have the Player tag on its gameobject, the enemies have no target and will not move."); }
@@ -81,7 +82,6 @@ public class EnemyScript : MonoBehaviour
 
             if(currentHealth <= 0)
             {
-                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Destroy(this.gameObject);
             }
@@ -105,7 +105,6 @@ public class EnemyScript : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                FindObjectOfType<RoomScript>().KilledEnemy();
                 FindObjectOfType<ExplosionSpawnerScript>().SpawnBubble(this.gameObject.transform.position);
                 Debug.Log("ENEMY DEAD");
                 Destroy(this.gameObject);

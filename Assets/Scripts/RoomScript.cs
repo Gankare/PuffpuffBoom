@@ -1,125 +1,75 @@
+
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using UnityEngine.U2D;
-using static UnityEngine.GraphicsBuffer;
 
 public class RoomScript : MonoBehaviour
 {
-    //Simple quick enemy counter
-    public int enemiesInRoom1;
-    public int enemiesInRoom2;
-    public int enemiesInRoom3;
-    public int enemiesInRoom4;
-    public int enemiesInRoom5;
+    public static int currentLevel;
 
-    //For camera movement
-    public static int level;
-    public static int enemiesDead;
-    public GameObject[] rooms;
-
-    //For player movement
     public static bool nextRoomPause;
     public float roomTransitionSpeed;
-    private float pauseTimer;
     private Transform playerTransform;
-    public Transform room2PlayerPos;
-    public Transform room3PlayerPos;
-    public Transform room4PlayerPos;
-    public Transform room5PlayerPos;
-    public TilemapCollider2D rockTileMap;
-    public GameObject doorColliders;
 
-    private void Start()
+    private GameObject doorCollider;
+    private TilemapCollider2D rockTileMapCollider;
+
+    public GameObject[] enemies;
+    public List<GameObject> enemieList = new List<GameObject>();
+
+    public Transform[] nextRoomPos;
+    public GameObject[] rooms;
+    void Start()
     {
+        currentLevel = 0;
+        nextRoomPause = false;
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        level = 1;
-        enemiesDead = 0;
-
-        //Sets all rooms to deactive in the beginning
-        for (int i = 0; i < rooms.Length; i++)
-        {
-            rooms[i].SetActive(false);
-        }
-    }
-    public void KilledEnemy()
-    {
-        enemiesDead++;
-
-        if (level == 1 && enemiesDead >= enemiesInRoom1)
-        {
-            enemiesDead = 0;
-            pauseTimer = 0;
-            level = 2;
-        }
-        if (level == 2 && enemiesDead >= enemiesInRoom2)
-        {
-            enemiesDead = 0;
-            pauseTimer = 0;
-            level = 3;
-        }
-        if (level == 3 && enemiesDead >= enemiesInRoom3)
-        {
-            enemiesDead = 0;
-            pauseTimer = 0;
-            level = 4;
-        }
-        else if (level == 4 && enemiesDead >= enemiesInRoom4)
-        {
-            enemiesDead = 0;
-            pauseTimer = 0;
-            level = 5;
-            Debug.Log("LEVEL 5");
-        }
+        rockTileMapCollider = GameObject.Find("Rocks").GetComponent<TilemapCollider2D>();
+        doorCollider = GameObject.Find("DoorColliders");
+        UpdateEnemies();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        pauseTimer += Time.deltaTime;
-        
-        for (int i = 0; i < level; i++)
+        RemoveEnemyFromList();
+    }
+    void Update()
+    {
+        if (enemieList.Count == 0 && !nextRoomPause) //Checks if all enemies are dead
         {
-            rooms[i].SetActive(true);
+            StartCoroutine(LoadNewLevel());
         }
-
-        if(level == 2 && pauseTimer < 2.5)
+        if(nextRoomPause) //Moves the player to next level while paused/waiting for next room
         {
-            doorColliders.SetActive(false);
-            rockTileMap.enabled = false;
-            nextRoomPause = true;
-            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room2PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
+            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, nextRoomPos[currentLevel - 1].position, roomTransitionSpeed * Time.deltaTime);
         }
-        else if (level == 3 && pauseTimer < 2.5)
+    }
+    public void RemoveEnemyFromList() //Removes dead enemies from list
+    {
+        enemieList.RemoveAll(nullEnemies => nullEnemies == null);
+    }
+    IEnumerator LoadNewLevel() //Readys the next room, spawning enemies and putting them in a list, removing colliders while player is paused and then adding them back when in new room
+    {
+        currentLevel += 1;
+        rooms[currentLevel].SetActive(true);
+        doorCollider.SetActive(false);
+        rockTileMapCollider.enabled = false;
+        nextRoomPause = true;
+        yield return new WaitForSeconds(0.5f);
+        UpdateEnemies();
+        yield return new WaitForSeconds(2);
+        nextRoomPause = false;
+        doorCollider.SetActive(true);
+        rockTileMapCollider.enabled = true;
+    }
+    public void UpdateEnemies() //Adds the alive enemies to enemylist
+    {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
         {
-            doorColliders.SetActive(false);
-            rockTileMap.enabled = false;
-            nextRoomPause = true;
-            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room3PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
-        }
-        else if (level == 4 && pauseTimer < 2.5)
-        {
-            doorColliders.SetActive(false);
-            rockTileMap.enabled = false;
-            nextRoomPause = true;
-            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room4PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
-        }
-        else if (level == 5 && pauseTimer < 2.5)
-        {
-            doorColliders.SetActive(false);
-            rockTileMap.enabled = false;
-            nextRoomPause = true;
-            playerTransform.position = Vector3.MoveTowards(playerTransform.transform.position, room5PlayerPos.position, roomTransitionSpeed * Time.deltaTime);
-            rooms[4].SetActive(true);
-
-        }
-        else
-        {
-            doorColliders.SetActive(true);
-            rockTileMap.enabled = true;
-            nextRoomPause = false;
+            if (enemy != null)
+                enemieList.Add(enemy);
         }
     }
 }
